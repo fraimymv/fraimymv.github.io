@@ -1,4 +1,5 @@
-/* Estilo general en tonos suaves y marrones */
+/* style.css */
+/* Tonos suaves marrones */
 
 body {
   font-family: "Source Sans Pro", Helvetica, sans-serif;
@@ -29,7 +30,7 @@ header {
   z-index: 1000;
 }
 
-header .container {
+header .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,6 +81,27 @@ nav ul li a:hover {
   background-color: #efebe9;
 }
 
+.hero {
+  background-color: #d7ccc8;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #3e2f20;
+  font-family: "Playfair Display", serif;
+}
+
+.hero h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  margin-top: 0.5rem;
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
 main.container {
   flex-grow: 1;
   padding-bottom: 2rem;
@@ -95,17 +117,24 @@ h2 {
   color: #6d4c41;
 }
 
-p, li {
+p,
+li {
   font-size: 1rem;
   color: #3e2f20;
 }
 
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
 .card {
-  background-color: #ffffff;
+  background-color: #fff8f4;
   border: 1px solid #e0dcd8;
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(61, 49, 39, 0.1);
   margin-bottom: 1.5rem;
 }
 
@@ -118,8 +147,19 @@ p, li {
   margin: 0.5rem 0;
 }
 
-.card .btn-cv {
-  margin-top: 0.5rem;
+.btn-card {
+  display: inline-block;
+  padding: 0.5rem 0.9rem;
+  background-color: #a1887f;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-card:hover {
+  background-color: #6d4c41;
 }
 
 .btn-cv {
@@ -131,10 +171,20 @@ p, li {
   border-radius: 6px;
   font-weight: 600;
   transition: background-color 0.3s;
+  margin-top: 1rem;
 }
 
 .btn-cv:hover {
   background-color: #6d4c41;
+}
+
+.contact-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contact-list li {
+  margin-bottom: 0.3rem;
 }
 
 footer {
@@ -145,4 +195,3 @@ footer {
   flex-shrink: 0;
   font-size: 0.9rem;
 }
-
