@@ -1,62 +1,178 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portafolio de Fran</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portafolio - Fraimy</title>
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f7f9fc;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    background: #1e90ff;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #lang-toggle {
+    background: #ffca28;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #1e90ff;
+  }
+  .lang-section {
+    display: none;
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  .lang-section.active {
+    display: block;
+  }
+  #hero {
+    background: linear-gradient(135deg, #1e90ff 0%, #4facfe 100%);
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+    border-radius: 0 0 20px 20px;
+  }
+  .btn {
+    background-color: #ffca28;
+    color: #1e90ff;
+    padding: 0.75rem 2rem;
+    border-radius: 25px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: inline-block;
+  }
+  .btn:hover {
+    background-color: #fbbf24;
+  }
+  h2 {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+  }
+  section h3 {
+    color: #1e90ff;
+    margin-bottom: 1rem;
+  }
+  .practice-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+    margin-bottom: 2rem;
+  }
+</style>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Fraimy's Portfolio</h1>
-            <ul>
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
 
+<header>
+  <h1>FraimyMV</h1>
+  <button id="lang-toggle">English</button>
+</header>
+
+<main>
+  <!-- Español -->
+  <section id="es" class="lang-section active">
     <section id="hero">
-        <div class="hero-content">
-            <h2>Hola, soy Fraimy Méndez Vásquez</h2>
-            <p>QA Tester | Apasionada del software y el aprendizaje constante</p>
-            <a href="#projects" class="btn">Ver proyectos</a>
-        </div>
+      <div class="hero-content">
+        <h2>Hola, soy Fraimy Méndez Vásquez</h2>
+        <p>QA Tester | Apasionada del software y el aprendizaje constante</p>
+        <a href="#practicas" class="btn">Ver prácticas</a>
+      </div>
     </section>
 
-    <section id="about">
-        <h2>Sobre mí</h2>
-        <p>Soy una profesional con certificado en software testing y experiencia en proyectos reales. Me encanta aprender, crear soluciones y compartir conocimiento.</p>
+    <section id="practicas">
+      <h2>Prácticas realizadas</h2>
+
+      <article class="practice-card">
+        <h3>Test Cases</h3>
+        <p>Diseño y ejecución de casos de prueba para validar funcionalidades.</p>
+      </article>
+
+      <article class="practice-card">
+        <h3>Postman Automatizado con JSON</h3>
+        <p>Automatización de pruebas API utilizando colecciones y scripts JSON en Postman.</p>
+      </article>
+
+      <article class="practice-card">
+        <h3>SQL (pendiente)</h3>
+        <p>Próximamente prácticas de consultas y manipulación de bases de datos con SQL.</p>
+      </article>
+
+      <article class="practice-card">
+        <h3>Postman: GET, POST, UPDATE</h3>
+        <p>Pruebas manuales y automatizadas de métodos HTTP GET, POST y UPDATE.</p>
+      </article>
+    </section>
+  </section>
+
+  <!-- Inglés -->
+  <section id="en" class="lang-section">
+    <section id="hero">
+      <div class="hero-content">
+        <h2>Hello, I'm Fraimy Méndez Vásquez</h2>
+        <p>QA Tester | Passionate about software and continuous learning</p>
+        <a href="#practices" class="btn">See practices</a>
+      </div>
     </section>
 
-    <section id="projects">
-        <h2>Proyectos destacados</h2>
-        <div class="project-cards">
-            <article class="project-card">
-                <h3>Calculadora gráfica en PowerShell</h3>
-                <p>Proyecto para crear una calculadora con funciones gráficas, historial y estilos.</p>
-                <a href="https://github.com/fraimymv/calculadora-powershell" target="_blank" rel="noopener">Ver repo</a>
-            </article>
-            <article class="project-card">
-                <h3>Portafolio Digital</h3>
-                <p>Mi sitio web personal donde comparto mi trayectoria, proyectos y contacto.</p>
-                <a href="https://fraimymv.github.io" target="_blank" rel="noopener">Ver sitio</a>
-            </article>
-            <!-- Agrega más proyectos aquí -->
-        </div>
-    </section>
+    <section id="practices">
+      <h2>Practices completed</h2>
 
-    <section id="contact">
-        <h2>Contacto</h2>
-        <p>¿Quieres conectar conmigo? Escríbeme a <a href="mailto:fraimymv35@gmail.com">fraimymv35@gmail.com</a> o por LinkedIn.</p>
-        <a href="https://www.linkedin.com/in/fraimy-mendez-vasquez/" target="_blank" rel="noopener">Mi LinkedIn</a>
-    </section>
+      <article class="practice-card">
+        <h3>Test Cases</h3>
+        <p>Design and execution of test cases to validate functionalities.</p>
+      </article>
 
-    <footer>
-        <p>© 2025 FraimyMV. Todos los derechos reservados.</p>
-    </footer>
+      <article class="practice-card">
+        <h3>Automated Postman with JSON</h3>
+        <p>API test automation using Postman collections and JSON scripts.</p>
+      </article>
+
+      <article class="practice-card">
+        <h3>SQL (pending)</h3>
+        <p>Upcoming practice on SQL queries and database manipulation.</p>
+      </article>
+
+      <article class="practice-card">
+        <h3>Postman: GET, POST, UPDATE</h3>
+        <p>Manual and automated testing of HTTP GET, POST, and UPDATE methods.</p>
+      </article>
+    </section>
+  </section>
+</main>
+
+<script>
+  const toggleBtn = document.getElementById('lang-toggle');
+  const esSection = document.getElementById('es');
+  const enSection = document.getElementById('en');
+
+  toggleBtn.addEventListener('click', () => {
+    if (esSection.classList.contains('active')) {
+      esSection.classList.remove('active');
+      enSection.classList.add('active');
+      toggleBtn.textContent = 'Español';
+    } else {
+      enSection.classList.remove('active');
+      esSection.classList.add('active');
+      toggleBtn.textContent = 'English';
+    }
+  });
+</script>
+
 </body>
 </html>
