@@ -185,30 +185,29 @@ li {
 /* Contact Section */
 .contact-section {
   text-align: center;
-}
 
 .contact-list {
   list-style: none;
   padding: 0;
+  max-width: 300px;
   margin: 0 auto;
-  max-width: 400px;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  font-size: 1.1rem;
-  color: #5d4037;
 }
 
 .contact-list li {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 8px;
+  font-size: 1rem;
+  color: #3e2f20;
+  margin-bottom: 0.8rem;
 }
 
 .contact-list li i {
-  font-size: 1.3rem;
   color: #6d4c41;
+  min-width: 20px;
+  font-size: 1.2rem;
 }
+
 
 /* Footer */
 footer {
