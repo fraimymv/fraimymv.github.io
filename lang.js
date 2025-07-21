@@ -27,9 +27,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.getElementById("nav-menu");
 
   menuToggle.addEventListener("click", () => {
-    const expanded = menuToggle.getAttribute("aria-expanded") === "true";
-    menuToggle.setAttribute("aria-expanded", !expanded);
-    navMenu.classList.toggle("open");
+    const isOpen = navMenu.classList.contains("open");
+    if (isOpen) {
+      navMenu.classList.remove("open");
+      navMenu.classList.add("closed");
+    } else {
+      navMenu.classList.remove("closed");
+      navMenu.classList.add("open");
+    }
   });
 });
+
 
