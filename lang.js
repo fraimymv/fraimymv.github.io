@@ -12,17 +12,28 @@ function updateLanguage(lang) {
 
   // Cambiar texto del botón para mostrar el idioma contrario
   langToggleBtn.textContent = lang === "es" ? "EN" : "ES";
+
+  // Cambiar href del botón de CV según idioma
+  const cvBtn = document.getElementById("btn-cv");
+  if (cvBtn) {
+    cvBtn.setAttribute(
+      "href",
+      lang === "es"
+        ? "docs/FraimyMendezVasquez_CV.pdf"
+        : "docs/FraimyMendezVasquez_Resume.pdf"
+    );
+  }
 }
 
-// Inicializar idioma al cargar
-updateLanguage(currentLang);
-
-langToggleBtn.addEventListener("click", () => {
-  updateLanguage(currentLang === "es" ? "en" : "es");
-});
-
-// --- MENÚ DESPLEGABLE ---
+// Ejecutar al cargar
 document.addEventListener("DOMContentLoaded", () => {
+  updateLanguage(currentLang);
+
+  langToggleBtn.addEventListener("click", () => {
+    updateLanguage(currentLang === "es" ? "en" : "es");
+  });
+
+  // Menú hamburguesa
   const menuToggle = document.querySelector(".menu-toggle");
   const navMenu = document.getElementById("nav-menu");
 
@@ -37,5 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
 
 
