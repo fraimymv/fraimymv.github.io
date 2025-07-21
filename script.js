@@ -1,33 +1,27 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const langToggle = document.getElementById("lang-toggle");
-  const btnCV = document.getElementById("btn-cv");
-  let isSpanish = true;
+const langToggle = document.getElementById("lang-toggle");
+const btnCV = document.getElementById("btn-cv");
+let isSpanish = true;
 
-  function updateLanguage() {
-    if (isSpanish) {
-      btnCV.href = "docs/FraimyMendezVasquez_CV.pdf";
-    } else {
-      btnCV.href = "docs/FraimyMendezVasquez_Resume.pdf";
-    }
-    btnCV.textContent = isSpanish
-      ? btnCV.getAttribute("data-lang-es")
-      : btnCV.getAttribute("data-lang-en");
-
-    document.querySelectorAll("[data-lang-es]").forEach((el) => {
-      el.textContent = isSpanish
-        ? el.getAttribute("data-lang-es")
-        : el.getAttribute("data-lang-en");
-    });
-
-    langToggle.textContent = isSpanish ? "EN" : "ES";
-  }
-
-  updateLanguage();
-
-  langToggle.addEventListener("click", () => {
-    isSpanish = !isSpanish;
-    updateLanguage();
+function updateLanguage() {
+  document.querySelectorAll("[data-lang-es]").forEach((el) => {
+    const es = el.getAttribute("data-lang-es");
+    const en = el.getAttribute("data-lang-en");
+    el.textContent = isSpanish ? es : en;
   });
+
+  btnCV.href = isSpanish
+    ? "docs/FraimyMendezVasquez_CV.pdf"
+    : "docs/FraimyMendezVasquez_Resume.pdf";
+  langToggle.textContent = isSpanish ? "EN" : "ES";
+  btnCV.textContent = isSpanish ? "Descargar CV" : "Download Resume";
+}
+
+// Cambiar idioma al hacer click
+langToggle.addEventListener("click", () => {
+  isSpanish = !isSpanish;
+  updateLanguage();
 });
 
+// Ejecutar al cargar
+updateLanguage();
 
