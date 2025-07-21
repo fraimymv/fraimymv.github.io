@@ -249,14 +249,38 @@ li {
 }
 
 .job {
-  margin-bottom: 2rem;
+  background: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.job h3 {
+  color: #6d4c41;
+  margin-bottom: 0.2rem;
 }
 
 .job-meta {
-  font-style: italic;
-  color: #7b6a58;
-  margin: 0.2rem 0 0.8rem 0;
   font-size: 0.9rem;
+  color: #9c7e5c;
+  margin-bottom: 0.6rem;
+  font-style: italic;
+}
+
+.job h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.job ul {
+  padding-left: 1.3rem;
+  margin: 0;
+}
+
+.job ul li {
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
 }
 
 
@@ -273,39 +297,40 @@ li {
   transform: translateY(-50%);
 }
 
-#certifications .cert-list {
+.cert-list {
   list-style: none;
-  padding: 0;
-  max-width: 700px;
+  padding-left: 0;
+  max-width: 600px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem 2rem;
 }
 
-#certifications .cert-list li {
-  background-color: #f9f5f1;
-  padding: 1rem 1.2rem;
+.cert-list li {
+  background: #fff;
+  padding: 0.8rem 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
-#certifications .cert-list li:hover {
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-#certifications .cert-list a {
+.cert-list a {
   color: #5b3e2b;
   font-weight: 600;
   text-decoration: none;
-  font-size: 1rem;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
 }
 
-#certifications .cert-list a:hover {
-  text-decoration: underline;
+.cert-list a i {
+  font-size: 0.8rem;
+}
+
+.cert-list a:hover {
   color: #7b5239;
+  text-decoration: underline;
 }
 
 /* Footer */
