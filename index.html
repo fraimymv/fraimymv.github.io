@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8" />
@@ -21,6 +21,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
   }
   #lang-toggle {
     background: #ffca28;
@@ -30,6 +31,10 @@
     font-weight: 700;
     cursor: pointer;
     color: #1e90ff;
+    transition: background-color 0.3s;
+  }
+  #lang-toggle:hover {
+    background-color: #fbbf24;
   }
   .lang-section {
     display: none;
@@ -75,13 +80,28 @@
     box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
     margin-bottom: 2rem;
   }
+  #contact p,
+  #contact a {
+    text-align: center;
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1e90ff;
+    color: white;
+    margin-top: 4rem;
+  }
 </style>
 </head>
 <body>
 
 <header>
   <h1>FraimyMV</h1>
-  <button id="lang-toggle" style="background:#ffca28; color:#1e90ff; padding:0.5rem 1rem; border:none; border-radius:20px; font-weight:700; cursor:pointer;">English</button>
+  <button id="lang-toggle">English</button>
 </header>
 
 <main>
@@ -93,6 +113,11 @@
         <p>QA Tester | Apasionada del software y el aprendizaje constante</p>
         <a href="#practicas" class="btn">Ver prácticas</a>
       </div>
+    </section>
+
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>Me encanta el testing de software y seguir aprendiendo cada día para crecer profesionalmente.</p>
     </section>
 
     <section id="practicas">
@@ -118,6 +143,12 @@
         <p>Pruebas manuales y automatizadas de métodos HTTP GET, POST y UPDATE.</p>
       </article>
     </section>
+
+    <section id="contact">
+      <h2>Contacto</h2>
+      <p>¿Quieres conectar conmigo? Escríbeme a <a href="mailto:fraimymv35@gmail.com">fraimymv35@gmail.com</a> o por LinkedIn.</p>
+      <a href="https://www.linkedin.com/in/fraimy-mendez-vasquez/" target="_blank" rel="noopener">Mi LinkedIn</a>
+    </section>
   </section>
 
   <!-- Inglés -->
@@ -128,6 +159,11 @@
         <p>QA Tester | Passionate about software and continuous learning</p>
         <a href="#practices" class="btn">See practices</a>
       </div>
+    </section>
+
+    <section id="about-me">
+      <h2>About me</h2>
+      <p>I love software testing and keep learning every day to grow professionally.</p>
     </section>
 
     <section id="practices">
@@ -153,8 +189,18 @@
         <p>Manual and automated testing of HTTP GET, POST, and UPDATE methods.</p>
       </article>
     </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Want to connect? Write me at <a href="mailto:fraimymv35@gmail.com">fraimymv35@gmail.com</a> or on LinkedIn.</p>
+      <a href="https://www.linkedin.com/in/fraimy-mendez-vasquez/" target="_blank" rel="noopener">My LinkedIn</a>
+    </section>
   </section>
 </main>
+
+<footer>
+  <p>© 2025 FraimyMV. All rights reserved.</p>
+</footer>
 
 <script>
   const toggleBtn = document.getElementById('lang-toggle');
@@ -176,3 +222,4 @@
 
 </body>
 </html>
+
