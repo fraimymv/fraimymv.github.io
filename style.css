@@ -39,3 +39,26 @@
 #hero h2 {
     color: white !important;
 }
+
+.downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1em;
+}
+
+.downloads .btn {
+  background-color: #007acc;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.downloads .btn:hover {
+  background-color: #005fa3;
+}
+
