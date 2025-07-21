@@ -1,95 +1,39 @@
-/* Reset y tipografía */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+#descargas {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1rem;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #f7f9fc;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
+#descargas h2 {
+  color: #1e90ff;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-header {
-    position: sticky;
-    top: 0;
-    background: #1e90ff;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+#descargas ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-#lang-toggle {
-    background: #ffca28;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: 700;
-    cursor: pointer;
-    color: #1e90ff;
-    transition: background-color 0.3s;
+#descargas ul li a {
+  display: block;
+  background-color: #ffca28;
+  color: #1e90ff;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s;
 }
 
-#lang-toggle:hover {
-    background-color: #fbbf24;
-}
-
-.lang-section {
-    display: none;
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-}
-
-.lang-section.active {
-    display: block;
-}
-
-#hero {
-    background: linear-gradient(135deg, #1e90ff 0%, #4facfe 100%);
-    color: white;
-    text-align: center;
-    padding: 6rem 2rem;
-    border-radius: 0 0 20px 20px;
-}
-
-.btn {
-    background-color: #ffca28;
-    color: #1e90ff;
-    padding: 0.75rem 2rem;
-    border-radius: 25px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    display: inline-block;
-}
-
-.btn:hover {
-    background-color: #fbbf24;
-}
-
-h2 {
-    margin-bottom: 0.5rem;
-    font-size: 2.5rem;
-}
-
-section h3 {
-    color: #1e90ff;
-    margin-bottom: 1rem;
-}
-
-.practice-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
-    margin-bottom: 2rem;
+#descargas ul li a:hover {
+  background-color: #fbbf24;
 }
 
 #hero h2 {
