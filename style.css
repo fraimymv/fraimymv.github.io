@@ -21,7 +21,7 @@ body {
 
 /* Header */
 header {
-  background-color: #6d4c41;
+  background-color: #00000040;
   color: white;
   padding: 1rem 0;
   position: sticky;
@@ -227,7 +227,7 @@ li {
 
 /* Footer */
 footer {
-  background-color: #6d4c41;
+  background-color: #00000040;
   color: white;
   text-align: center;
   padding: 1rem;
