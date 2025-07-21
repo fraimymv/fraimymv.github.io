@@ -23,8 +23,8 @@
   </div>
 </header>
 
-<main class="container">
-  <section id="about" class="section">
+<main>
+  <section id="about">
     <h2>
       <span class="lang lang-es active">Acerca de mí</span>
       <span class="lang lang-en">About Me</span>
@@ -35,7 +35,7 @@
     </p>
   </section>
 
-  <section id="projects" class="section">
+  <section id="projects">
     <h2>
       <span class="lang lang-es active">Proyectos</span>
       <span class="lang lang-en">Projects</span>
@@ -89,7 +89,7 @@
     </ul>
   </section>
 
-  <section id="experience" class="section">
+  <section id="experience">
     <h2>
       <span class="lang lang-es active">Experiencia</span>
       <span class="lang lang-en">Experience</span>
@@ -102,7 +102,7 @@
     </p>
   </section>
 
-  <section id="contact" class="section">
+  <section id="contact">
     <h2>
       <span class="lang lang-es active">Contacto</span>
       <span class="lang lang-en">Contact</span>
@@ -116,9 +116,7 @@
 </main>
 
 <footer>
-  <div class="container">
-    <p>© 2025 Fraimy Méndez Vásquez. Todos los derechos reservados. / All rights reserved.</p>
-  </div>
+  <p>© 2025 Fraimy Méndez Vásquez. Todos los derechos reservados. / All rights reserved.</p>
 </footer>
 
 <script>
@@ -144,7 +142,7 @@
   btnEs.addEventListener('click', () => setLanguage('es'));
   btnEn.addEventListener('click', () => setLanguage('en'));
 
-  // Opcional: detectar idioma navegador e iniciar así
+  // Detectar idioma navegador para iniciar
   const userLang = navigator.language || navigator.userLanguage;
   if (userLang.startsWith('en')) {
     setLanguage('en');
