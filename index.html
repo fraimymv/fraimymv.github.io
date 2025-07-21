@@ -1,174 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Portfolio - Fraimy</title>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio de Fraimy Méndez Vásquez</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Fraimy Méndez Vásquez</h1>
+      <p>Software Tester | Quality Assurance | Automation Enthusiast</p>
+    </header>
 
-<header>
-  <h1>FraimyMV</h1>
-  <button id="lang-toggle" aria-label="Cambiar idioma">English</button>
-</header>
-
-<main>
-  <!-- Español -->
-  <section id="es" class="lang-section active">
-    <section id="hero-es">
-      <div class="hero-content">
-        <h2>Hola, soy Fraimy Méndez Vásquez</h2>
-        <p>QA Tester | Apasionada del software y el aprendizaje constante</p>
-        <a href="#practicas-es" class="btn">Ver prácticas</a>
-      </div>
+    <section id="about">
+      <h2>Acerca de mí</h2>
+      <p>
+        Soy una profesional en testing de software con experiencia en la creación y ejecución de casos de prueba, automatización con Postman, y manejo de bases de datos SQL. Apasionada por la calidad y la mejora continua.
+      </p>
     </section>
 
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>Apasionada por la garantía de calidad de software, con experiencia práctica en pruebas manuales, diseño de casos de prueba y reporte de defectos.</p>
+    <section id="projects">
+      <h2>Proyectos</h2>
+      <ul>
+        <li>
+          <strong>Casos de prueba para calculadora</strong><br />
+          Diseño de casos para validar operaciones básicas (suma, resta, multiplicación, división).<br />
+          <a href="docs/TestCases_FraimyMV.pdf" target="_blank" rel="noopener noreferrer">Ver PDF</a>
+        </li>
+        <li>
+          <strong>CRUD SQL</strong><br />
+          Prácticas de consultas básicas y JOIN para manejo de bases de datos.<br />
+          <a href="docs/CRUD_SQL.docx" target="_blank" rel="noopener noreferrer">Ver documento</a>
+        </li>
+        <li>
+          <strong>API REST con Postman</strong><br />
+          Documentación y automatización de pruebas.<br />
+          <a href="docs/API_REST_Postman_FraimyMV.pdf" target="_blank" rel="noopener noreferrer">Ver PDF</a>
+        </li>
+        <li>
+          <strong>Automatización en Postman</strong><br />
+          Scripts para pruebas automatizadas.<br />
+          <a href="docs/Postman_Automated" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+        </li>
+      </ul>
     </section>
 
-    <section id="curriculum-es">
-      <h2>Currículum</h2>
-      <div class="download-button">
-        <a href="docs/FraimyMendezVasquez_CV.pdf" download>📄 Descargar CV (Español)</a>
-      </div>
+    <section id="experience">
+      <h2>Experiencia</h2>
+      <p>
+        Software Testing Intern en Smart Testing (Feb 2025 - Jun 2025) en República Dominicana. 
+        Realicé pruebas funcionales, creé casos de prueba, y participé en procesos de automatización.
+      </p>
     </section>
 
-    <section id="practicas-es">
-      <h2>Prácticas realizadas</h2>
-
-      <div class="download-buttons">
-        <a href="docs/TestCases_FraimyMV.pdf" download>Casos de Prueba</a>
-        <a href="docs/API_REST_Postman_FraimyMV.pdf" download>API REST Postman</a>
-        <a href="https://github.com/fraimymv/portfolio-fraimy/tree/main/postman-api" download>Automated Postman</a>
-        <a href="docs/CRUD_SQL.docx" download>SQL CRUD</a>
-      </div>
-
-      <article class="practice-card">
-        <div class="download-button">
-          <h3>Test Cases</h3>
-          <p>Diseño y ejecución de casos de prueba para validar funcionalidades.</p>
-        </a>
-  <a href="docs/TestCases_FraimyMV.pdf" download>Casos de Prueba</a>
-</div>
-      </article>
-
-      <article class="practice-card">
-        <a href="docs/API_REST_Postman_FraimyMV.pdf" download>
-          <h3>Postman Automatizado con JSON</h3>
-          <p>Automatización de pruebas API utilizando colecciones y scripts JSON en Postman.</p>
-        </a>
-      </article>
-
-      <article class="practice-card">
-        <a href="docs/API_REST_Postman_FraimyMV.pdf" download>
-          <h3>Postman: GET, POST, UPDATE</h3>
-          <p>Pruebas manuales y automatizadas de métodos HTTP GET, POST y UPDATE.</p>
-        </a>
-      </article>
-
-      <article class="practice-card">
-        <h3>SQL (pendiente)</h3>
-        <p>Próximamente prácticas de consultas y manipulación de bases de datos con SQL.</p>
-      </article>
-    </section>
-
-    <section id="contact-es">
+    <section id="contact">
       <h2>Contacto</h2>
-      <p>¿Quieres conectar conmigo? Escríbeme a <a href="mailto:fraimymv35@gmail.com">fraimymv35@gmail.com</a> o por LinkedIn.</p>
-      <a href="https://www.linkedin.com/in/fraimy-mendez-vasquez/" target="_blank" rel="noopener">Mi LinkedIn</a>
-    </section>
-  </section>
-
-  <!-- Inglés -->
-  <section id="en" class="lang-section">
-    <section id="hero-en">
-      <div class="hero-content">
-        <h2>Hello, I'm Fraimy Méndez Vásquez</h2>
-        <p>QA Tester | Passionate about software and continuous learning</p>
-        <a href="#practices-en" class="btn">See practices</a>
-      </div>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:fraimymv35@gmail.com">fraimymv35@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com/fraimymv" target="_blank" rel="noopener noreferrer">github.com/fraimymv</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/fraimymv/" target="_blank" rel="noopener noreferrer">linkedin.com/in/fraimymv</a></li>
+      </ul>
     </section>
 
-    <section id="about-me">
-      <h2>About me</h2>
-      <p>Quality Assurance professional with hands-on experience in manual testing, test case design, and defect reporting on web and mobile applications.</p>
-    </section>
-
-    <section id="resume-en">
-      <h2>Resume</h2>
-      <div class="download-button">
-        <a href="docs/FraimyMendezVasquez_Resume.pdf" download>📄 Download Resume (English)</a>
-      </div>
-    </section>
-
-    <section id="practices-en">
-      <h2>Completed Practices</h2>
-
-      <div class="download-buttons">
-        <a href="docs/TestCases_FraimyMV.pdf" download>🧪 Test Cases</a>
-        <a href="docs/API_REST_Postman_FraimyMV.pdf" download>🔧 API REST Postman</a>
-        <a href="docs/CRUD_SQL.docx" download>💾 SQL CRUD</a>
-      </div>
-
-      <article class="practice-card">
-        <a href="docs/TestCases_FraimyMV.pdf" download>
-          <h3>Test Cases</h3>
-          <p>Design and execution of test cases to validate functionalities.</p>
-        </a>
-      </article>
-
-      <article class="practice-card">
-        <a href="docs/API_REST_Postman_FraimyMV.pdf" download>
-          <h3>Postman Automation with JSON</h3>
-          <p>API test automation using collections and JSON scripts in Postman.</p>
-        </a>
-      </article>
-
-      <article class="practice-card">
-        <a href="docs/API_REST_Postman_FraimyMV.pdf" download>
-          <h3>Postman: GET, POST, UPDATE</h3>
-          <p>Manual and automated testing of HTTP methods GET, POST, and UPDATE.</p>
-        </a>
-      </article>
-
-      <article class="practice-card">
-        <h3>SQL (coming soon)</h3>
-        <p>Coming soon: practice with SQL queries and database manipulation.</p>
-      </article>
-    </section>
-
-    <section id="contact-en">
-      <h2>Contact</h2>
-      <p>Want to connect? Write to me at <a href="mailto:fraimymv35@gmail.com">fraimymv35@gmail.com</a> or on LinkedIn.</p>
-      <a href="https://www.linkedin.com/in/fraimy-mendez-vasquez/" target="_blank" rel="noopener">My LinkedIn</a>
-    </section>
-  </section>
-</main>
-
-<footer>
-  <p>© 2025 FraimyMV. All rights reserved.</p>
-</footer>
-
-<script>
-  const toggleBtn = document.getElementById('lang-toggle');
-  const esSection = document.getElementById('es');
-  const enSection = document.getElementById('en');
-
-  toggleBtn.addEventListener('click', () => {
-    if (esSection.classList.contains('active')) {
-      esSection.classList.remove('active');
-      enSection.classList.add('active');
-      toggleBtn.textContent = 'Español';
-    } else {
-      enSection.classList.remove('active');
-      esSection.classList.add('active');
-      toggleBtn.textContent = 'English';
-    }
-  });
-</script>
-
+    <footer>
+      <p>© 2025 Fraimy Méndez Vásquez. Todos los derechos reservados.</p>
+    </footer>
+  </div>
 </body>
 </html>
