@@ -133,6 +133,20 @@ nav ul li a:hover {
   .menu-toggle {
     display: flex;
   }
+
+@media (max-width: 768px) {
+  nav ul.closed {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  nav ul.open {
+    max-height: 500px; /* o el alto que necesites */
+    overflow: visible;
+  }
+}
+
 }
 
 /* Botón de idioma */
