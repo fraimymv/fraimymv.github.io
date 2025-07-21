@@ -1,64 +1,150 @@
-#descargas {
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fafafa;
+  color: #444;
+  line-height: 1.6;
+  margin: 0;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #a3cef1; /* azul claro suave */
+  color: #2c3e50;      /* azul oscuro para contraste */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  z-index: 100;
+}
+
+#lang-toggle {
+  background: #ffd97d; /* amarillo pastel */
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  color: #2c3e50;
+  transition: background-color 0.3s;
+}
+
+#lang-toggle:hover {
+  background-color: #ffca3a; /* amarillo más vibrante */
+}
+
+.lang-section {
+  display: none;
   max-width: 900px;
   margin: 3rem auto;
   padding: 0 1rem;
 }
 
-#descargas h2 {
-  color: #1e90ff;
-  text-align: center;
-  margin-bottom: 1.5rem;
-}
-
-#descargas ul {
-  list-style: none;
-  padding-left: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-#descargas ul li a {
+.lang-section.active {
   display: block;
-  background-color: #ffca28;
-  color: #1e90ff;
-  padding: 0.75rem 1rem;
-  border-radius: 12px;
-  font-weight: 600;
-  text-decoration: none;
+}
+
+#hero-es, #hero-en {
+  background: linear-gradient(135deg, #a3cef1 0%, #8cc7f7 100%);
+  color: #2c3e50;
   text-align: center;
+  padding: 5rem 2rem;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 8px rgba(163,206,241,0.4);
+}
+
+.btn {
+  background-color: #ffd97d;
+  color: #2c3e50;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: 700;
+  text-decoration: none;
   transition: background-color 0.3s;
+  display: inline-block;
+  margin-top: 1rem;
 }
 
-#descargas ul li a:hover {
-  background-color: #fbbf24;
+.btn:hover {
+  background-color: #ffca3a;
 }
 
-#hero h2 {
-    color: white !important;
+h1, h2 {
+  font-weight: 800;
+  color: #2c3e50;
 }
 
-.downloads {
+section h3 {
+  color: #5a81a8; /* azul medio */
+  margin-bottom: 1rem;
+}
+
+.practice-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(44,62,80,0.1);
+  margin-bottom: 2rem;
+  transition: transform 0.2s ease;
+}
+
+.practice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(44,62,80,0.15);
+}
+
+#contact-es p,
+#contact-en p,
+#contact-es a,
+#contact-en a {
+  text-align: center;
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #555;
+  text-decoration: none;
+}
+
+#contact-es a:hover,
+#contact-en a:hover {
+  color: #2c3e50;
+  text-decoration: underline;
+}
+
+.download-buttons {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 1em;
+  justify-content: center;
 }
 
-.downloads .btn {
-  background-color: #007acc;
-  color: white;
+.download-buttons a {
+  background-color: #a3cef1;
+  color: #2c3e50;
   padding: 10px 16px;
-  border: none;
-  border-radius: 5px;
+  border-radius: 12px;
+  font-weight: 600;
   text-decoration: none;
-  font-weight: bold;
   transition: background-color 0.3s ease;
+  display: inline-block;
+  min-width: 140px;
+  text-align: center;
 }
 
-.downloads .btn:hover {
-  background-color: #005fa3;
+.download-buttons a:hover {
+  background-color: #8cc7f7;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #a3cef1;
+  color: #2c3e50;
+  margin-top: 4rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
 }
 
