@@ -7,9 +7,11 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header id="header">
-    <div class="container">
-      <h1 class="logo">Fraimy Méndez Vásquez</h1>
+
+<header id="header">
+  <div class="container">
+    <h1 class="logo">Fraimy Méndez Vásquez</h1>
+    <div class="right-menu">
       <nav>
         <ul>
           <li>
@@ -32,7 +34,8 @@
       </nav>
       <button id="lang-toggle" title="Cambiar idioma / Switch language">EN</button>
     </div>
-  </header>
+  </div>
+</header>
 
   <main class="container">
     <section id="about" class="section">
@@ -129,7 +132,7 @@
   const langToggle = document.getElementById('lang-toggle');
   langToggle.addEventListener('click', () => {
     const currentLang = langToggle.textContent.toLowerCase();
-    const newLang = currentLang === 'en' ? 'es' : 'en';
+    const newLang = currentLang === 'es' ? 'en' : 'es';
 
     document.querySelectorAll('.lang').forEach(el => {
       el.style.display = el.dataset.lang === newLang ? '' : 'none';
