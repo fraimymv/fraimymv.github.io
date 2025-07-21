@@ -29,12 +29,22 @@ header {
   z-index: 1000;
 }
 
-header .header-content {
+.header-content {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-between; /* Logo a la izquierda, todo lo demás a la derecha */
+  align-items: center; /* Alinea verticalmente */
   padding: 0 1rem;
 }
+
+/* Y el contenedor de botones a la derecha, con los botones juntos */
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem; /* espacio entre botones */
+  justify-content: flex-end; /* asegúrate que estén a la derecha */
+  flex-shrink: 0; /* que no se reduzcan */
+}
+
 
 .logo {
   font-weight: 700;
@@ -88,20 +98,22 @@ nav ul li a:hover {
 
 /* Botón menú hamburguesa - tres líneas */
 .menu-toggle {
-  display: none;
+  display: flex; /* ahora siempre visible */
   flex-direction: column;
   justify-content: space-between;
   width: 25px;
   height: 20px;
   cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .menu-toggle span {
   display: block;
-  height: 3px;
+  height: 5px;         /* antes 3px, ahora más gruesas */
   background-color: white;
   border-radius: 2px;
-  margin: 3px 0;
 }
 
 /* Responsive */
