@@ -5,238 +5,146 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Portfolio - Fraimy</title>
 <style>
-  body {
-    font-family: 'Poppins', sans-serif;
-    background: #f7f9fc;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-  }
-  header {
-    position: sticky;
-    top: 0;
-    background: #1e90ff;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-  }
-  #lang-toggle {
-    background: #ffca28;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: 700;
-    cursor: pointer;
-    color: #1e90ff;
-    transition: background-color 0.3s;
-  }
-  #lang-toggle:hover {
-    background-color: #fbbf24;
-  }
-  .lang-section {
-    display: none;
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-  }
-  .lang-section.active {
-    display: block;
-  }
-  #hero {
-    background: linear-gradient(135deg, #1e90ff 0%, #4facfe 100%);
-    color: white;
-    text-align: center;
-    padding: 6rem 2rem;
-    border-radius: 0 0 20px 20px;
-  }
-  .btn {
-    background-color: #ffca28;
-    color: #1e90ff;
-    padding: 0.75rem 2rem;
-    border-radius: 25px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: background-color 0.3s;
-    display: inline-block;
-  }
-  .btn:hover {
-    background-color: #fbbf24;
-  }
-  h2 {
-    margin-bottom: 0.5rem;
-    font-size: 2.5rem;
-  }
-  section h3 {
-    color: #1e90ff;
-    margin-bottom: 1rem;
-  }
-  .practice-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
-    margin-bottom: 2rem;
-  }
-  #contact p,
-  #contact a {
-    text-align: center;
-    display: block;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-    color: #555;
-  }
-  footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #1e90ff;
-    color: white;
-    margin-top: 4rem;
-  }
+  /* Aquí irá el CSS que te dejo después */
 </style>
 </head>
 <body>
 
 <header>
   <h1>FraimyMV</h1>
-  <button id="lang-toggle">English</button>
+  <button id="lang-toggle" aria-label="Cambiar idioma">English</button>
 </header>
 
 <main>
   <!-- Español -->
   <section id="es" class="lang-section active">
-    <section id="hero">
+    <section id="hero-es">
       <div class="hero-content">
         <h2>Hola, soy Fraimy Méndez Vásquez</h2>
         <p>QA Tester | Apasionada del software y el aprendizaje constante</p>
-        <a href="#practicas" class="btn">Ver prácticas</a>
+        <a href="#practicas-es" class="btn">Ver prácticas</a>
       </div>
     </section>
 
     <section id="sobre-mi">
       <h2>Sobre mí</h2>
-      <p>Apasionada por la garantía de calidad de software, con experiencia práctica en pruebas manuales, diseño de casos de prueba y
-reporte de defectos.</p>>
+      <p>Apasionada por la garantía de calidad de software, con experiencia práctica en pruebas manuales, diseño de casos de prueba y reporte de defectos.</p>
     </section>
 
-<section id="Curriculum">
-  <h2>Curriculum</h2>
-  <div class="download-button">
-    <a href="docs/FraimyMendezVasquez_CV.pdf" download>📄 Descargar CV (Español)</a>
-  </div>
-</section>
+    <section id="curriculum-es">
+      <h2>Currículum</h2>
+      <div class="download-button">
+        <a href="docs/FraimyMendezVasquez_CV.pdf" download>📄 Descargar CV (Español)</a>
+      </div>
+    </section>
 
-  <section id="practicas">
-  <h2>Prácticas realizadas</h2>
+    <section id="practicas-es">
+      <h2>Prácticas realizadas</h2>
 
-  <div class="download-buttons">
-    <a href="docs/TestCases_FraimyMV.pdf" download>🧪 Casos de Prueba</a>
-    <a href="docs/API_REST_Postman_FraimyMV.pdf" download>🔧 API REST Postman</a>
-    <a href="docs/CRUD_SQL.docx" download>💾 SQL CRUD</a>
-  </div>
+      <div class="download-buttons">
+        <a href="docs/TestCases_FraimyMV.pdf" download>🧪 Casos de Prueba</a>
+        <a href="docs/API_REST_Postman_FraimyMV.pdf" download>🔧 API REST Postman</a>
+        <a href="docs/CRUD_SQL.docx" download>💾 SQL CRUD</a>
+      </div>
 
-  <article class="practice-card">
-    <a href="docs/TestCases_FraimyMV.pdf" download>
-      <h3>Test Cases</h3>
-      <p>Diseño y ejecución de casos de prueba para validar funcionalidades.</p>
-    </a>
-  </article>
+      <article class="practice-card">
+        <a href="docs/TestCases_FraimyMV.pdf" download>
+          <h3>Test Cases</h3>
+          <p>Diseño y ejecución de casos de prueba para validar funcionalidades.</p>
+        </a>
+      </article>
 
-  <article class="practice-card">
-    <a href="docs/API_REST_Postman_FraimyMV.pdf" download>
-      <h3>Postman Automatizado con JSON</h3>
-      <p>Automatización de pruebas API utilizando colecciones y scripts JSON en Postman.</p>
-    </a>
-  </article>
+      <article class="practice-card">
+        <a href="docs/API_REST_Postman_FraimyMV.pdf" download>
+          <h3>Postman Automatizado con JSON</h3>
+          <p>Automatización de pruebas API utilizando colecciones y scripts JSON en Postman.</p>
+        </a>
+      </article>
 
-  <article class="practice-card">
-    <a href="docs/API_REST_Postman_FraimyMV.pdf" download>
-      <h3>Postman: GET, POST, UPDATE</h3>
-      <p>Pruebas manuales y automatizadas de métodos HTTP GET, POST y UPDATE.</p>
-    </a>
-  </article>
+      <article class="practice-card">
+        <a href="docs/API_REST_Postman_FraimyMV.pdf" download>
+          <h3>Postman: GET, POST, UPDATE</h3>
+          <p>Pruebas manuales y automatizadas de métodos HTTP GET, POST y UPDATE.</p>
+        </a>
+      </article>
 
-  <article class="practice-card">
-    <h3>SQL (pendiente)</h3>
-    <p>Próximamente prácticas de consultas y manipulación de bases de datos con SQL.</p>
-  </article>
-</section>
+      <article class="practice-card">
+        <h3>SQL (pendiente)</h3>
+        <p>Próximamente prácticas de consultas y manipulación de bases de datos con SQL.</p>
+      </article>
+    </section>
 
-
-    <section id="contact">
+    <section id="contact-es">
       <h2>Contacto</h2>
       <p>¿Quieres conectar conmigo? Escríbeme a <a href="mailto:fraimymv35@gmail.com">fraimymv35@gmail.com</a> o por LinkedIn.</p>
       <a href="https://www.linkedin.com/in/fraimy-mendez-vasquez/" target="_blank" rel="noopener">Mi LinkedIn</a>
+    </section>
   </section>
 
   <!-- Inglés -->
   <section id="en" class="lang-section">
-    <section id="hero">
+    <section id="hero-en">
       <div class="hero-content">
         <h2>Hello, I'm Fraimy Méndez Vásquez</h2>
         <p>QA Tester | Passionate about software and continuous learning</p>
-        <a href="#practices" class="btn">See practices</a>
+        <a href="#practices-en" class="btn">See practices</a>
       </div>
     </section>
 
     <section id="about-me">
       <h2>About me</h2>
-      <p>Quality Assurance professional with hands-on experience in manual testing, test case design, and defect reporting on
-web and mobile applications.</p>
+      <p>Quality Assurance professional with hands-on experience in manual testing, test case design, and defect reporting on web and mobile applications.</p>
     </section>
 
-<section id="Resume">
-  <h2>Resume</h2>
-  <div class="download-button">
-    <a href="docs/FraimyMendezVasquez_Resume.pdf" download>📄 Download Resume (English)</a>
-  </div>
-</section>
+    <section id="resume-en">
+      <h2>Resume</h2>
+      <div class="download-button">
+        <a href="docs/FraimyMendezVasquez_Resume.pdf" download>📄 Download Resume (English)</a>
+      </div>
+    </section>
 
-    <section id="practices">
-  <h2>Completed Practices</h2>
+    <section id="practices-en">
+      <h2>Completed Practices</h2>
 
-  <div class="download-buttons">
-    <a href="docs/TestCases_FraimyMV.pdf" download>🧪 Test Cases</a>
-    <a href="docs/API_REST_Postman_FraimyMV.pdf" download>🔧 API REST Postman</a>
-    <a href="docs/CRUD_SQL.docx" download>💾 SQL CRUD</a>
-  </div>
+      <div class="download-buttons">
+        <a href="docs/TestCases_FraimyMV.pdf" download>🧪 Test Cases</a>
+        <a href="docs/API_REST_Postman_FraimyMV.pdf" download>🔧 API REST Postman</a>
+        <a href="docs/CRUD_SQL.docx" download>💾 SQL CRUD</a>
+      </div>
 
-  <article class="practice-card">
-    <a href="docs/TestCases_FraimyMV.pdf" download>
-      <h3>Test Cases</h3>
-      <p>Design and execution of test cases to validate functionalities.</p>
-    </a>
-  </article>
+      <article class="practice-card">
+        <a href="docs/TestCases_FraimyMV.pdf" download>
+          <h3>Test Cases</h3>
+          <p>Design and execution of test cases to validate functionalities.</p>
+        </a>
+      </article>
 
-  <article class="practice-card">
-    <a href="docs/API_REST_Postman_FraimyMV.pdf" download>
-      <h3>Postman Automation with JSON</h3>
-      <p>API test automation using collections and JSON scripts in Postman.</p>
-    </a>
-  </article>
+      <article class="practice-card">
+        <a href="docs/API_REST_Postman_FraimyMV.pdf" download>
+          <h3>Postman Automation with JSON</h3>
+          <p>API test automation using collections and JSON scripts in Postman.</p>
+        </a>
+      </article>
 
-  <article class="practice-card">
-    <a href="docs/API_REST_Postman_FraimyMV.pdf" download>
-      <h3>Postman: GET, POST, UPDATE</h3>
-      <p>Manual and automated testing of HTTP methods GET, POST, and UPDATE.</p>
-    </a>
-  </article>
+      <article class="practice-card">
+        <a href="docs/API_REST_Postman_FraimyMV.pdf" download>
+          <h3>Postman: GET, POST, UPDATE</h3>
+          <p>Manual and automated testing of HTTP methods GET, POST, and UPDATE.</p>
+        </a>
+      </article>
 
-  <article class="practice-card">
-    <h3>SQL (coming soon)</h3>
-    <p>Coming soon: practice with SQL queries and database manipulation.</p>
-  </article>
-</section>
+      <article class="practice-card">
+        <h3>SQL (coming soon)</h3>
+        <p>Coming soon: practice with SQL queries and database manipulation.</p>
+      </article>
+    </section>
 
-
-    <section id="contact">
+    <section id="contact-en">
       <h2>Contact</h2>
       <p>Want to connect? Write to me at <a href="mailto:fraimymv35@gmail.com">fraimymv35@gmail.com</a> or on LinkedIn.</p>
       <a href="https://www.linkedin.com/in/fraimy-mendez-vasquez/" target="_blank" rel="noopener">My LinkedIn</a>
+    </section>
   </section>
- </section>
 </main>
 
 <footer>
@@ -263,4 +171,3 @@ web and mobile applications.</p>
 
 </body>
 </html>
-
