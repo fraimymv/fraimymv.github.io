@@ -21,3 +21,15 @@ langToggleBtn.addEventListener("click", () => {
   updateLanguage(currentLang === "es" ? "en" : "es");
 });
 
+// ----------- Menu toggle -----------
+
+document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
+
+  menuToggle.addEventListener("click", () => {
+    const expanded = menuToggle.getAttribute("aria-expanded") === "true" || false;
+    menuToggle.setAttribute("aria-expanded", !expanded);
+    navMenu.classList.toggle("open");
+  });
+});
