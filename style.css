@@ -25,9 +25,13 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+ #header .container {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
 }
 
 .logo {
@@ -115,4 +119,20 @@ footer {
   padding: 1rem 0;
   flex-shrink: 0;
   font-size: 0.9rem;
+}
+
+.btn-cv {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #007acc;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cv:hover {
+  background-color: #005f99;
 }
