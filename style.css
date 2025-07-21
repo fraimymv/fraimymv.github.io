@@ -17,6 +17,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 0; /* para evitar márgenes por defecto */
 }
 
 .container {
@@ -26,13 +27,15 @@ body {
   padding: 1rem 0;
 }
 
+/* HEADER */
 header {
   background-color: #007acc;
   color: white;
-  padding: 1rem 0;
+  padding: 1rem 2rem;  /* un poco más de padding horizontal */
   position: sticky;
   top: 0;
   z-index: 1000;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -41,26 +44,36 @@ header {
 .logo {
   font-weight: 700;
   font-size: 1.5rem;
-  margin-left: 1rem;
+  /* margen izquierdo puede quedar */
+  margin-left: 0;
 }
 
 nav ul {
   display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
   list-style: none;
-  gap: 1.5rem;
-  margin-right: 1rem;
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  padding: 0.3rem 0.7rem;
+  display: inline-block;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 4px;
 }
 
 nav ul li a:hover {
-  color: #aaddff;
+  color: #007acc;
+  background-color: white;
 }
+
 
 #lang-toggle {
   background-color: white;
