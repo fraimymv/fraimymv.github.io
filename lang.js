@@ -35,17 +35,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Menú hamburguesa
   const menuToggle = document.querySelector(".menu-toggle");
-  const navMenu = document.getElementById("nav-menu");
+const navMenu = document.getElementById("nav-menu");
 
-  menuToggle.addEventListener("click", () => {
-    const isOpen = navMenu.classList.contains("open");
-    if (isOpen) {
-      navMenu.classList.remove("open");
-      navMenu.classList.add("closed");
-    } else {
-      navMenu.classList.remove("closed");
-      navMenu.classList.add("open");
-    }
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+  navMenu.classList.toggle("closed");
   });
 });
 
