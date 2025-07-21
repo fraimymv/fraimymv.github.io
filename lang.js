@@ -1,32 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const langToggle = document.getElementById("lang-toggle");
-  const btnCV = document.getElementById("btn-cv");
-  let isSpanish = true;
+const langToggleBtn = document.getElementById("lang-toggle");
+let currentLang = "es";
 
-  function updateLanguage() {
-    if (isSpanish) {
-      btnCV.href = "docs/FraimyMendezVasquez_CV.pdf";
-    } else {
-      btnCV.href = "docs/FraimyMendezVasquez_Resume.pdf";
-    }
-    btnCV.textContent = isSpanish
-      ? btnCV.getAttribute("data-lang-es")
-      : btnCV.getAttribute("data-lang-en");
+function updateLanguage(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
 
-    document.querySelectorAll("[data-lang-es]").forEach((el) => {
-      el.textContent = isSpanish
-        ? el.getAttribute("data-lang-es")
-        : el.getAttribute("data-lang-en");
-    });
-
-    langToggle.textContent = isSpanish ? "EN" : "ES";
-  }
-
-  updateLanguage();
-
-  langToggle.addEventListener("click", () => {
-    isSpanish = !isSpanish;
-    updateLanguage();
+  document.querySelectorAll("[data-lang-es]").forEach((el) => {
+    el.textContent = lang === "es" ? el.getAttribute("data-lang-es") : el.getAttribute("data-lang-en");
   });
+
+  // Cambiar texto del botón para mostrar el idioma contrario
+  langToggleBtn.textContent = lang === "es" ? "EN" : "ES";
+}
+
+// Inicializar idioma al cargar
+updateLanguage(currentLang);
+
+langToggleBtn.addEventListener("click", () => {
+  updateLanguage(currentLang === "es" ? "en" : "es");
 });
 
