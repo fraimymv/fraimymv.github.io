@@ -4,249 +4,162 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fraimy Méndez Vásquez | Portafolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Sans+Pro:wght@300;400;600&display=swap"
     rel="stylesheet"
   />
+
+  <!-- Font Awesome for icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
   />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <div class="container header-content">
-      <div class="logo lang active" data-lang="es">Fraimy Méndez Vásquez</div>
-      <div class="logo lang" data-lang="en">Fraimy Méndez Vásquez</div>
-
+      <div class="logo">Fraimy Méndez Vásquez</div>
       <nav>
         <ul>
-          <li>
-            <a href="#about" class="lang active" data-lang="es">Acerca</a>
-            <a href="#about" class="lang" data-lang="en">About</a>
-          </li>
-          <li>
-            <a href="#projects" class="lang active" data-lang="es">Proyectos</a>
-            <a href="#projects" class="lang" data-lang="en">Projects</a>
-          </li>
-          <li>
-            <a href="#experience" class="lang active" data-lang="es">Experiencia</a>
-            <a href="#experience" class="lang" data-lang="en">Experience</a>
-          </li>
-          <li>
-            <a href="#contact" class="lang active" data-lang="es">Contacto</a>
-            <a href="#contact" class="lang" data-lang="en">Contact</a>
-          </li>
+          <li><a href="#about" data-lang-es="Acerca" data-lang-en="About">Acerca</a></li>
+          <li><a href="#projects" data-lang-es="Proyectos" data-lang-en="Projects">Proyectos</a></li>
+          <li><a href="#experience" data-lang-es="Experiencia" data-lang-en="Experience">Experiencia</a></li>
+          <li><a href="#contact" data-lang-es="Contacto" data-lang-en="Contact">Contacto</a></li>
         </ul>
       </nav>
-
-      <button id="lang-toggle" aria-label="Cambiar a inglés">EN</button>
+      <button id="lang-toggle" aria-label="Cambiar idioma">EN</button>
     </div>
   </header>
 
   <section class="hero">
     <div class="container">
-      <h1 class="lang active" data-lang="es">Fraimy Méndez Vásquez</h1>
-      <h1 class="lang" data-lang="en">Fraimy Méndez Vásquez</h1>
-
-      <p class="lang active" data-lang="es">
+      <h1 data-lang-es="Fraimy Méndez Vásquez" data-lang-en="Fraimy Méndez Vásquez">Fraimy Méndez Vásquez</h1>
+      <p data-lang-es="Software Tester | QA | Certificada ISTQB" data-lang-en="Software Tester | QA | ISTQB Certified">
         Software Tester | QA | Certificada ISTQB
       </p>
-      <p class="lang" data-lang="en">Software Tester | QA | ISTQB Certified</p>
     </div>
   </section>
 
   <main class="container">
     <section id="about" class="section">
-      <h2 class="lang active" data-lang="es">Acerca de mí</h2>
-      <h2 class="lang" data-lang="en">About Me</h2>
-
-      <p class="lang active" data-lang="es">
+      <h2 data-lang-es="Acerca de mí" data-lang-en="About Me">Acerca de mí</h2>
+      <p data-lang-es="Apasionada por la calidad del software y la mejora continua. Con experiencia en pruebas manuales, automatización básica y uso de herramientas como Postman y Jira."
+         data-lang-en="Passionate about software quality and continuous improvement. Experienced in manual testing, basic automation, and using tools like Postman and Jira.">
         Apasionada por la calidad del software y la mejora continua. Con experiencia en pruebas manuales, automatización básica y uso de herramientas como Postman y Jira.
       </p>
-      <p class="lang" data-lang="en">
-        Passionate about software quality and continuous improvement. Experienced in manual testing, basic automation, and tools like Postman and Jira.
-      </p>
-
       <a
-        class="btn-cv lang active"
-        data-lang="es"
-        href="docs/FraimyMendezVasquez_CV.pdf"
+        class="btn-cv"
         id="btn-cv"
+        href="docs/FraimyMendezVasquez_CV.pdf"
         download
-        >Descargar CV</a
       >
-      <a
-        class="btn-cv lang"
-        data-lang="en"
-        href="docs/FraimyMendezVasquez_Resume.pdf"
-        id="btn-cv-en"
-        download
-        style="display:none"
-        >Download Resume</a
-      >
+        Descargar CV
+      </a>
     </section>
 
     <section id="projects" class="section">
-      <h2 class="lang active" data-lang="es">Proyectos</h2>
-      <h2 class="lang" data-lang="en">Projects</h2>
-
+      <h2 data-lang-es="Proyectos" data-lang-en="Projects">Proyectos</h2>
       <div class="card-grid">
         <div class="card">
-          <h3 class="lang active" data-lang="es">Test Cases</h3>
-          <h3 class="lang" data-lang="en">Test Cases</h3>
-          <p class="lang active" data-lang="es">
+          <h3 data-lang-es="Test Cases" data-lang-en="Test Cases">Test Cases</h3>
+          <p data-lang-es="Documentación detallada de casos de prueba manuales para diversas funcionalidades."
+             data-lang-en="Detailed documentation of manual test cases for various functionalities.">
             Documentación detallada de casos de prueba manuales para diversas funcionalidades.
           </p>
-          <p class="lang" data-lang="en">
-            Detailed documentation of manual test cases for various features.
-          </p>
           <a
-            class="btn-card lang active"
-            data-lang="es"
+            class="btn-card"
             href="docs/TestCases_FraimyMV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            >Ver documento</a
+            data-lang-es="Ver documento"
+            data-lang-en="View document"
           >
-          <a
-            class="btn-card lang"
-            data-lang="en"
-            href="docs/TestCases_FraimyMV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            style="display:none"
-            >View document</a
-          >
+            Ver documento
+          </a>
         </div>
-
         <div class="card">
-          <h3 class="lang active" data-lang="es">API Testing</h3>
-          <h3 class="lang" data-lang="en">API Testing</h3>
-          <p class="lang active" data-lang="es">
+          <h3 data-lang-es="API Testing" data-lang-en="API Testing">API Testing</h3>
+          <p data-lang-es="Pruebas en Postman para endpoints RESTful, validando respuestas y estructura."
+             data-lang-en="Postman tests for RESTful endpoints, validating responses and structure.">
             Pruebas en Postman para endpoints RESTful, validando respuestas y estructura.
           </p>
-          <p class="lang" data-lang="en">
-            Postman tests for RESTful endpoints, validating responses and structure.
-          </p>
           <a
-            class="btn-card lang active"
-            data-lang="es"
+            class="btn-card"
             href="docs/API_REST_Postman_FraimyMV.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            >Ver documento</a
+            data-lang-es="Ver documento"
+            data-lang-en="View document"
           >
-          <a
-            class="btn-card lang"
-            data-lang="en"
-            href="docs/API_REST_Postman_FraimyMV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            style="display:none"
-            >View document</a
-          >
+            Ver documento
+          </a>
         </div>
-
         <div class="card">
-          <h3 class="lang active" data-lang="es">Automatización Postman</h3>
-          <h3 class="lang" data-lang="en">Postman Automation</h3>
-          <p class="lang active" data-lang="es">
+          <h3 data-lang-es="Automatización Postman" data-lang-en="Postman Automation">Automatización Postman</h3>
+          <p data-lang-es="Pruebas automatizadas usando scripts en Postman con validaciones y reportes."
+             data-lang-en="Automated tests using Postman scripts with validations and reports.">
             Pruebas automatizadas usando scripts en Postman con validaciones y reportes.
           </p>
-          <p class="lang" data-lang="en">
-            Automated tests using Postman scripts with validations and reports.
-          </p>
           <a
-            class="btn-card lang active"
-            data-lang="es"
+            class="btn-card"
             href="docs/Postman_Automated.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            >Ver documento</a
+            data-lang-es="Ver documento"
+            data-lang-en="View document"
           >
-          <a
-            class="btn-card lang"
-            data-lang="en"
-            href="docs/Postman_Automated.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            style="display:none"
-            >View document</a
-          >
+            Ver documento
+          </a>
         </div>
-
         <div class="card">
-          <h3 class="lang active" data-lang="es">CRUD SQL</h3>
-          <h3 class="lang" data-lang="en">SQL CRUD</h3>
-          <p class="lang active" data-lang="es">
+          <h3 data-lang-es="CRUD SQL" data-lang-en="SQL CRUD">CRUD SQL</h3>
+          <p data-lang-es="Diseño y ejecución de comandos SQL básicos para gestión de datos en base de datos."
+             data-lang-en="Design and execution of basic SQL commands for database management.">
             Diseño y ejecución de comandos SQL básicos para gestión de datos en base de datos.
           </p>
-          <p class="lang" data-lang="en">
-            Design and execution of basic SQL commands for database data management.
-          </p>
           <a
-            class="btn-card lang active"
-            data-lang="es"
+            class="btn-card"
             href="docs/CRUD_SQL.docx"
             target="_blank"
             rel="noopener noreferrer"
-            >Ver documento</a
+            data-lang-es="Ver documento"
+            data-lang-en="View document"
           >
-          <a
-            class="btn-card lang"
-            data-lang="en"
-            href="docs/CRUD_SQL.docx"
-            target="_blank"
-            rel="noopener noreferrer"
-            style="display:none"
-            >View document</a
-          >
+            Ver documento
+          </a>
         </div>
       </div>
     </section>
 
     <section id="experience" class="section">
-      <h2 class="lang active" data-lang="es">Experiencia</h2>
-      <h2 class="lang" data-lang="en">Experience</h2>
+      <h2 data-lang-es="Experiencia" data-lang-en="Experience">Experiencia</h2>
       <ul>
-        <li class="lang active" data-lang="es"><strong>Inmoplace SRL</strong> – Pasante QA (6 meses)</li>
-        <li class="lang active" data-lang="es">Certificado en Software Testing – Udemy</li>
-        <li class="lang active" data-lang="es">Inglés nivel C1 – Pruebas técnicas y entrevistas en inglés</li>
-
-        <li class="lang" data-lang="en"><strong>Inmoplace SRL</strong> – QA Intern (6 months)</li>
-        <li class="lang" data-lang="en">Software Testing Certificate – Udemy</li>
-        <li class="lang" data-lang="en">English level C1 – Technical tests and interviews</li>
+        <li data-lang-es="Inmoplace SRL – Pasante QA (6 meses)" data-lang-en="Inmoplace SRL – QA Intern (6 months)">Inmoplace SRL – Pasante QA (6 meses)</li>
+        <li data-lang-es="Certificado en Software Testing – Udemy" data-lang-en="Software Testing Certificate – Udemy">Certificado en Software Testing – Udemy</li>
+        <li data-lang-es="Inglés nivel C1 – Pruebas técnicas y entrevistas en inglés" data-lang-en="English level C1 – Technical tests and interviews in English">Inglés nivel C1 – Pruebas técnicas y entrevistas en inglés</li>
       </ul>
     </section>
 
-    <section id="contact" class="section">
-      <h2 class="lang active" data-lang="es">Contacto</h2>
-      <h2 class="lang" data-lang="en">Contact</h2>
+    <section id="contact" class="section contact-section">
+      <h2 data-lang-es="Contacto" data-lang-en="Contact">Contacto</h2>
       <ul class="contact-list">
-        <li class="lang active" data-lang="es">
+        <li>
           <i class="fas fa-envelope"></i>
           <a href="mailto:fraimy@example.com">fraimy@example.com</a>
         </li>
-        <li class="lang active" data-lang="es">
+        <li>
           <i class="fab fa-linkedin"></i>
           <a href="https://linkedin.com/in/fraimymv" target="_blank" rel="noopener noreferrer">fraimymv</a>
         </li>
-        <li class="lang active" data-lang="es">
-          <i class="fab fa-github"></i>
-          <a href="https://github.com/fraimymv" target="_blank" rel="noopener noreferrer">fraimymv</a>
-        </li>
-
-        <li class="lang" data-lang="en">
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:fraimy@example.com">fraimy@example.com</a>
-        </li>
-        <li class="lang" data-lang="en">
-          <i class="fab fa-linkedin"></i>
-          <a href="https://linkedin.com/in/fraimymv" target="_blank" rel="noopener noreferrer">fraimymv</a>
-        </li>
-        <li class="lang" data-lang="en">
+        <li>
           <i class="fab fa-github"></i>
           <a href="https://github.com/fraimymv" target="_blank" rel="noopener noreferrer">fraimymv</a>
         </li>
@@ -255,10 +168,10 @@
   </main>
 
   <footer>
-    <p class="lang active" data-lang="es">&copy; 2025 Fraimy Méndez Vásquez. Todos los derechos reservados.</p>
-    <p class="lang" data-lang="en">&copy; 2025 Fraimy Méndez Vásquez. All rights reserved.</p>
+    <p data-lang-es="© 2025 Fraimy Méndez Vásquez. Todos los derechos reservados." data-lang-en="© 2025 Fraimy Méndez Vásquez. All rights reserved.">
+      © 2025 Fraimy Méndez Vásquez. Todos los derechos reservados.
+    </p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
