@@ -1,101 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fraimy Méndez Vásquez - Software Tester</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fraimy Méndez Vásquez - Software Tester</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header id="header">
-    <div class="container">
-      <h1 class="logo">Fraimy Méndez Vásquez</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">Acerca / About</a></li>
-          <li><a href="#projects">Proyectos / Projects</a></li>
-          <li><a href="#experience">Experiencia / Experience</a></li>
-          <li><a href="#contact">Contacto / Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+  <h1 class="logo">Fraimy Méndez Vásquez</h1>
+  <nav>
+    <ul>
+      <li><a href="#about" data-section>Acerca / About</a></li>
+      <li><a href="#projects" data-section>Proyectos / Projects</a></li>
+      <li><a href="#experience" data-section>Experiencia / Experience</a></li>
+      <li><a href="#contact" data-section>Contacto / Contact</a></li>
+    </ul>
+  </nav>
+  <div id="lang-select">
+    <button id="btn-es" class="active" aria-label="Cambiar a español">ES</button>
+    <button id="btn-en" aria-label="Switch to English">EN</button>
+  </div>
+</header>
 
-  <main class="container">
-    <section id="about" class="section">
-      <h2>Acerca de mí / About Me</h2>
-      <p>
-        Soy una profesional en testing de software con experiencia en creación y ejecución de casos de prueba, automatización con Postman y manejo de SQL.<br />
-        I am a software testing professional with experience in designing and executing test cases, Postman automation, and SQL management.
-      </p>
-    </section>
+<main class="container">
+  <section id="about" class="section">
+    <h2>
+      <span class="lang lang-es active">Acerca de mí</span>
+      <span class="lang lang-en">About Me</span>
+    </h2>
+    <p>
+      <span class="lang lang-es active">Soy una profesional en testing de software con experiencia en creación y ejecución de casos de prueba, automatización con Postman y manejo de SQL.</span>
+      <span class="lang lang-en">I am a software testing professional with experience in designing and executing test cases, Postman automation, and SQL management.</span>
+    </p>
+  </section>
 
-    <section id="projects" class="section">
-      <h2>Proyectos / Projects</h2>
-      <ul>
-        <li>
-          <strong>Casos de prueba para calculadora / Calculator Test Cases</strong><br />
-          Diseño de casos para validar operaciones básicas (suma, resta, multiplicación, división).<br />
-          Design of test cases to validate basic operations (addition, subtraction, multiplication, division).<br />
-          <a href="docs/TestCases_FraimyMV.pdf" target="_blank" rel="noopener noreferrer">Ver PDF / View PDF</a>
-        </li>
-        <li>
-          <strong>CRUD SQL</strong><br />
-          Prácticas de consultas básicas y JOIN para bases de datos.<br />
-          Basic query and JOIN exercises for databases.<br />
-          <a href="docs/CRUD_SQL.docx" target="_blank" rel="noopener noreferrer">Ver documento / View document</a>
-        </li>
-        <li>
-          <strong>API REST con Postman</strong><br />
-          Documentación y automatización de pruebas.<br />
-          Documentation and automation of tests.<br />
-          <a href="docs/API_REST_Postman_FraimyMV.pdf" target="_blank" rel="noopener noreferrer">Ver PDF / View PDF</a>
-        </li>
-        <li>
-          <strong>Automatización en Postman / Postman Automation</strong><br />
-          Scripts para pruebas automatizadas.<br />
-          Automation scripts for tests.<br />
-          <a href="docs/Postman_Automated" target="_blank" rel="noopener noreferrer">Ver proyecto / View project</a>
-        </li>
-      </ul>
-    </section>
+  <section id="projects" class="section">
+    <h2>
+      <span class="lang lang-es active">Proyectos</span>
+      <span class="lang lang-en">Projects</span>
+    </h2>
+    <ul>
+      <li>
+        <strong>
+          <span class="lang lang-es active">Casos de prueba para calculadora</span>
+          <span class="lang lang-en">Calculator Test Cases</span>
+        </strong><br />
+        <span class="lang lang-es active">Diseño de casos para validar operaciones básicas (suma, resta, multiplicación, división).</span>
+        <span class="lang lang-en">Design of test cases to validate basic operations (addition, subtraction, multiplication, division).</span><br />
+        <a href="docs/TestCases_FraimyMV.pdf" target="_blank" rel="noopener noreferrer">
+          <span class="lang lang-es active">Ver PDF</span>
+          <span class="lang lang-en">View PDF</span>
+        </a>
+      </li>
+      <li>
+        <strong>CRUD SQL</strong><br />
+        <span class="lang lang-es active">Prácticas de consultas básicas y JOIN para bases de datos.</span>
+        <span class="lang lang-en">Basic query and JOIN exercises for databases.</span><br />
+        <a href="docs/CRUD_SQL.docx" target="_blank" rel="noopener noreferrer">
+          <span class="lang lang-es active">Ver documento</span>
+          <span class="lang lang-en">View document</span>
+        </a>
+      </li>
+      <li>
+        <strong>
+          <span class="lang lang-es active">API REST con Postman</span>
+          <span class="lang lang-en">API REST with Postman</span>
+        </strong><br />
+        <span class="lang lang-es active">Documentación y automatización de pruebas.</span>
+        <span class="lang lang-en">Documentation and automation of tests.</span><br />
+        <a href="docs/API_REST_Postman_FraimyMV.pdf" target="_blank" rel="noopener noreferrer">
+          <span class="lang lang-es active">Ver PDF</span>
+          <span class="lang lang-en">View PDF</span>
+        </a>
+      </li>
+      <li>
+        <strong>
+          <span class="lang lang-es active">Automatización en Postman</span>
+          <span class="lang lang-en">Postman Automation</span>
+        </strong><br />
+        <span class="lang lang-es active">Scripts para pruebas automatizadas.</span>
+        <span class="lang lang-en">Automation scripts for tests.</span><br />
+        <a href="docs/Postman_Automated" target="_blank" rel="noopener noreferrer">
+          <span class="lang lang-es active">Ver proyecto</span>
+          <span class="lang lang-en">View project</span>
+        </a>
+      </li>
+    </ul>
+  </section>
 
-    <section id="experience" class="section">
-      <h2>Experiencia / Experience</h2>
-      <p>
-        Software Testing Intern en Smart Testing (Feb 2025 - Jun 2025) en República Dominicana.<br />
-        Software Testing Intern at Smart Testing (Feb 2025 - Jun 2025) in the Dominican Republic.<br />
-        Realicé pruebas funcionales, creé casos de prueba, y participé en procesos de automatización.<br />
-        Performed functional testing, created test cases, and participated in automation processes.
-      </p>
-    </section>
+  <section id="experience" class="section">
+    <h2>
+      <span class="lang lang-es active">Experiencia</span>
+      <span class="lang lang-en">Experience</span>
+    </h2>
+    <p>
+      <span class="lang lang-es active">Software Testing Intern en Smart Testing (Feb 2025 - Jun 2025) en República Dominicana.</span><br />
+      <span class="lang lang-en">Software Testing Intern at Smart Testing (Feb 2025 - Jun 2025) in the Dominican Republic.</span><br />
+      <span class="lang lang-es active">Realicé pruebas funcionales, creé casos de prueba, y participé en procesos de automatización.</span><br />
+      <span class="lang lang-en">Performed functional testing, created test cases, and participated in automation processes.</span>
+    </p>
+  </section>
 
-    <section id="contact" class="section">
-      <h2>Contacto / Contact</h2>
-      <ul class="contact-list">
-        <li>Email: <a href="mailto:fraimymv35@gmail.com">fraimymv35@gmail.com</a></li>
-        <li>GitHub: <a href="https://github.com/fraimymv" target="_blank" rel="noopener noreferrer">github.com/fraimymv</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com/in/fraimymv/" target="_blank" rel="noopener noreferrer">linkedin.com/in/fraimymv</a></li>
-      </ul>
-    </section>
-  </main>
+  <section id="contact" class="section">
+    <h2>
+      <span class="lang lang-es active">Contacto</span>
+      <span class="lang lang-en">Contact</span>
+    </h2>
+    <ul class="contact-list">
+      <li>Email: <a href="mailto:fraimymv35@gmail.com">fraimymv35@gmail.com</a></li>
+      <li>GitHub: <a href="https://github.com/fraimymv" target="_blank" rel="noopener noreferrer">github.com/fraimymv</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/fraimymv/" target="_blank" rel="noopener noreferrer">linkedin.com/in/fraimymv</a></li>
+    </ul>
+  </section>
+</main>
 
-  <footer>
-    <div class="container">
-      <p>© 2025 Fraimy Méndez Vásquez. Todos los derechos reservados. / All rights reserved.</p>
-    </div>
-  </footer>
+<footer>
+  <div class="container">
+    <p>© 2025 Fraimy Méndez Vásquez. Todos los derechos reservados. / All rights reserved.</p>
+  </div>
+</footer>
 
-  <script>
-    // Scroll suave para enlaces de navegación
-    document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
+<script>
+  const btnEs = document.getElementById('btn-es');
+  const btnEn = document.getElementById('btn-en');
+  const langEsElems = document.querySelectorAll('.lang-es');
+  const langEnElems = document.querySelectorAll('.lang-en');
+
+  function setLanguage(lang) {
+    if (lang === 'es') {
+      langEsElems.forEach(el => el.classList.add('active'));
+      langEnElems.forEach(el => el.classList.remove('active'));
+      btnEs.classList.add('active');
+      btnEn.classList.remove('active');
+    } else {
+      langEsElems.forEach(el => el.classList.remove('active'));
+      langEnElems.forEach(el => el.classList.add('active'));
+      btnEs.classList.remove('active');
+      btnEn.classList.add('active');
+    }
+  }
+
+  btnEs.addEventListener('click', () => setLanguage('es'));
+  btnEn.addEventListener('click', () => setLanguage('en'));
+
+  // Opcional: detectar idioma navegador e iniciar así
+  const userLang = navigator.language || navigator.userLanguage;
+  if (userLang.startsWith('en')) {
+    setLanguage('en');
+  } else {
+    setLanguage('es');
+  }
+</script>
 </body>
 </html>
