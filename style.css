@@ -101,6 +101,26 @@ nav ul li a:hover {
   height: 3px;
   background-color: white;
   border-radius: 2px;
+  margin: 3px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
 }
 
 /* Botón de idioma */
