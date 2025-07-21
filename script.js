@@ -1,27 +1,28 @@
 const langToggle = document.getElementById("lang-toggle");
-const spanishElements = document.querySelectorAll(".lang[data-lang='es']");
-const englishElements = document.querySelectorAll(".lang[data-lang='en']");
-
+const btnCV = document.getElementById("btn-cv");
 let isSpanish = true;
 
 function updateLanguage() {
-  spanishElements.forEach((el) => {
-    el.classList.toggle("active", isSpanish);
+  if (isSpanish) {
+    btnCV.href = "docs/FraimyMendezVasquez_CV.pdf";
+    btnCV.textContent = "Descargar CV";
+    langToggle.textContent = "EN";
+  } else {
+    btnCV.href = "docs/FraimyMendezVasquez_Resume.pdf";
+    btnCV.textContent = "Download Resume";
+    langToggle.textContent = "ES";
+  }
+
+  // Cambiar textos en toda la página según atributo data-lang-es / data-lang-en
+  document.querySelectorAll("[data-lang-es]").forEach((el) => {
+    el.textContent = isSpanish ? el.getAttribute("data-lang-es") : el.getAttribute("data-lang-en");
   });
-  englishElements.forEach((el) => {
-    el.classList.toggle("active", !isSpanish);
-  });
-  langToggle.textContent = isSpanish ? "EN" : "ES";
-  langToggle.setAttribute(
-    "aria-label",
-    isSpanish ? "Cambiar a inglés" : "Cambiar a español"
-  );
 }
+
+// Inicializar idioma al cargar la página
+updateLanguage();
 
 langToggle.addEventListener("click", () => {
   isSpanish = !isSpanish;
   updateLanguage();
 });
-
-// Inicializa en español
-updateLanguage();
