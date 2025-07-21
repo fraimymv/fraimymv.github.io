@@ -3,69 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portafolio de Fraimy Méndez Vásquez</title>
+  <title>Fraimy Méndez Vásquez - Software Tester</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Fraimy Méndez Vásquez</h1>
-      <p>Software Tester | Quality Assurance | Automation Enthusiast</p>
-    </header>
+  <header id="header">
+    <div class="container">
+      <h1 class="logo">Fraimy Méndez Vásquez</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">Acerca / About</a></li>
+          <li><a href="#projects">Proyectos / Projects</a></li>
+          <li><a href="#experience">Experiencia / Experience</a></li>
+          <li><a href="#contact">Contacto / Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <section id="about">
-      <h2>Acerca de mí</h2>
+  <main class="container">
+    <section id="about" class="section">
+      <h2>Acerca de mí / About Me</h2>
       <p>
-        Soy una profesional en testing de software con experiencia en la creación y ejecución de casos de prueba, automatización con Postman, y manejo de bases de datos SQL. Apasionada por la calidad y la mejora continua.
+        Soy una profesional en testing de software con experiencia en creación y ejecución de casos de prueba, automatización con Postman y manejo de SQL.<br />
+        I am a software testing professional with experience in designing and executing test cases, Postman automation, and SQL management.
       </p>
     </section>
 
-    <section id="projects">
-      <h2>Proyectos</h2>
+    <section id="projects" class="section">
+      <h2>Proyectos / Projects</h2>
       <ul>
         <li>
-          <strong>Casos de prueba para calculadora</strong><br />
+          <strong>Casos de prueba para calculadora / Calculator Test Cases</strong><br />
           Diseño de casos para validar operaciones básicas (suma, resta, multiplicación, división).<br />
-          <a href="docs/TestCases_FraimyMV.pdf" target="_blank" rel="noopener noreferrer">Ver PDF</a>
+          Design of test cases to validate basic operations (addition, subtraction, multiplication, division).<br />
+          <a href="docs/TestCases_FraimyMV.pdf" target="_blank" rel="noopener noreferrer">Ver PDF / View PDF</a>
         </li>
         <li>
           <strong>CRUD SQL</strong><br />
-          Prácticas de consultas básicas y JOIN para manejo de bases de datos.<br />
-          <a href="docs/CRUD_SQL.docx" target="_blank" rel="noopener noreferrer">Ver documento</a>
+          Prácticas de consultas básicas y JOIN para bases de datos.<br />
+          Basic query and JOIN exercises for databases.<br />
+          <a href="docs/CRUD_SQL.docx" target="_blank" rel="noopener noreferrer">Ver documento / View document</a>
         </li>
         <li>
           <strong>API REST con Postman</strong><br />
           Documentación y automatización de pruebas.<br />
-          <a href="docs/API_REST_Postman_FraimyMV.pdf" target="_blank" rel="noopener noreferrer">Ver PDF</a>
+          Documentation and automation of tests.<br />
+          <a href="docs/API_REST_Postman_FraimyMV.pdf" target="_blank" rel="noopener noreferrer">Ver PDF / View PDF</a>
         </li>
         <li>
-          <strong>Automatización en Postman</strong><br />
+          <strong>Automatización en Postman / Postman Automation</strong><br />
           Scripts para pruebas automatizadas.<br />
-          <a href="docs/Postman_Automated" target="_blank" rel="noopener noreferrer">Ver proyecto</a>
+          Automation scripts for tests.<br />
+          <a href="docs/Postman_Automated" target="_blank" rel="noopener noreferrer">Ver proyecto / View project</a>
         </li>
       </ul>
     </section>
 
-    <section id="experience">
-      <h2>Experiencia</h2>
+    <section id="experience" class="section">
+      <h2>Experiencia / Experience</h2>
       <p>
-        Software Testing Intern en Smart Testing (Feb 2025 - Jun 2025) en República Dominicana. 
-        Realicé pruebas funcionales, creé casos de prueba, y participé en procesos de automatización.
+        Software Testing Intern en Smart Testing (Feb 2025 - Jun 2025) en República Dominicana.<br />
+        Software Testing Intern at Smart Testing (Feb 2025 - Jun 2025) in the Dominican Republic.<br />
+        Realicé pruebas funcionales, creé casos de prueba, y participé en procesos de automatización.<br />
+        Performed functional testing, created test cases, and participated in automation processes.
       </p>
     </section>
 
-    <section id="contact">
-      <h2>Contacto</h2>
+    <section id="contact" class="section">
+      <h2>Contacto / Contact</h2>
       <ul class="contact-list">
         <li>Email: <a href="mailto:fraimymv35@gmail.com">fraimymv35@gmail.com</a></li>
         <li>GitHub: <a href="https://github.com/fraimymv" target="_blank" rel="noopener noreferrer">github.com/fraimymv</a></li>
         <li>LinkedIn: <a href="https://www.linkedin.com/in/fraimymv/" target="_blank" rel="noopener noreferrer">linkedin.com/in/fraimymv</a></li>
       </ul>
     </section>
+  </main>
 
-    <footer>
-      <p>© 2025 Fraimy Méndez Vásquez. Todos los derechos reservados.</p>
-    </footer>
-  </div>
+  <footer>
+    <div class="container">
+      <p>© 2025 Fraimy Méndez Vásquez. Todos los derechos reservados. / All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll suave para enlaces de navegación
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
 </body>
 </html>
