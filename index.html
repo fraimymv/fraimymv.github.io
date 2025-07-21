@@ -125,23 +125,22 @@
     </div>
   </footer>
 
-  <script>
-    const langToggle = document.getElementById('lang-toggle');
-    langToggle.addEventListener('click', () => {
-      const currentLang = langToggle.textContent === 'EN' ? 'es' : 'en';
-      const newLang = currentLang === 'es' ? 'en' : 'es';
+<script>
+  const langToggle = document.getElementById('lang-toggle');
+  langToggle.addEventListener('click', () => {
+    const currentLang = langToggle.textContent.toLowerCase();
+    const newLang = currentLang === 'en' ? 'es' : 'en';
 
-      document.querySelectorAll('.lang').forEach(el => {
-        if (el.dataset.lang === newLang) {
-          el.style.display = '';
-        } else {
-          el.style.display = 'none';
-        }
-      });
-
-      langToggle.textContent = newLang.toUpperCase();
-      langToggle.title = newLang === 'es' ? 'Cambiar idioma / Switch language' : 'Switch language / Cambiar idioma';
+    document.querySelectorAll('.lang').forEach(el => {
+      el.style.display = el.dataset.lang === newLang ? '' : 'none';
     });
-  </script>
+
+    langToggle.textContent = newLang.toUpperCase();
+    langToggle.title = newLang === 'es'
+      ? 'Cambiar idioma / Switch language'
+      : 'Switch language / Cambiar idioma';
+  });
+</script>
+
 </body>
 </html>
