@@ -1,6 +1,7 @@
 console.log("scrollAnimation.js loaded");
-function onEntry(entry) {
-  entry.forEach(change => {
+
+function onEntry(entries) {
+  entries.forEach(change => {
     if (change.isIntersecting) {
       change.target.classList.add("visible");
     }
