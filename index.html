@@ -16,21 +16,35 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="container header-content">
-      <div class="logo" data-lang-es="Fraimy Méndez Vásquez" data-lang-en="Fraimy Méndez Vásquez">Fraimy Méndez Vásquez</div>
-      <nav>
-        <ul>
-          <li><a href="#about" data-lang-es="Acerca" data-lang-en="About">Acerca</a></li>
-          <li><a href="#projects" data-lang-es="Proyectos" data-lang-en="Projects">Proyectos</a></li>
-          <li><a href="#experience" data-lang-es="Experiencia" data-lang-en="Experience">Experiencia</a></li>
-          <li><a href="#certifications" data-lang-es="Certificaciones" data-lang-en="Certifications">Certificaciones</a></li>
-          <li><a href="#contact" data-lang-es="Contacto" data-lang-en="Contact">Contacto</a></li>
-        </ul>
-      </nav>
-      <button id="lang-toggle" aria-label="Cambiar idioma">EN</button>
+
+<header>
+  <div class="header-content">
+    <a href="#" class="logo">Mi Portafolio</a>
+
+    <!-- Botón de menú hamburguesa -->
+    <div class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
-  </header>
+
+    <!-- Navegación -->
+    <nav>
+      <ul id="nav-menu" class="closed">
+        <li><a href="#inicio" data-lang-es="Inicio" data-lang-en="Home">Inicio</a></li>
+        <li><a href="#sobre-mi" data-lang-es="Sobre mí" data-lang-en="About me">Sobre mí</a></li>
+        <li><a href="#habilidades" data-lang-es="Habilidades" data-lang-en="Skills">Habilidades</a></li>
+        <li><a href="#proyectos" data-lang-es="Proyectos" data-lang-en="Projects">Proyectos</a></li>
+        <li><a href="#experiencia" data-lang-es="Experiencia" data-lang-en="Experience">Experiencia</a></li>
+        <li><a href="#contacto" data-lang-es="Contacto" data-lang-en="Contact">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botón de idioma -->
+    <button id="lang-toggle">EN</button>
+  </div>
+</header>
+=
 
   <section class="hero">
     <div class="container">
