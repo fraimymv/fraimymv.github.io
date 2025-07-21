@@ -1,3 +1,4 @@
+console.log("lang.js loaded");
 const langToggleBtn = document.getElementById("lang-toggle");
 let currentLang = "es";
 
