@@ -1,3 +1,4 @@
+console.log("scrollAnimation.js loaded");
 function onEntry(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
