@@ -31,20 +31,18 @@ header {
 
 .header-content {
   display: flex;
-  justify-content: space-between; /* Logo a la izquierda, todo lo demás a la derecha */
-  align-items: center; /* Alinea verticalmente */
+  justify-content: space-between;
+  align-items: center;
   padding: 0 1rem;
 }
 
-/* Y el contenedor de botones a la derecha, con los botones juntos */
 .header-buttons {
   display: flex;
   align-items: center;
-  gap: 0.6rem; /* espacio entre botones */
-  justify-content: flex-end; /* asegúrate que estén a la derecha */
-  flex-shrink: 0; /* que no se reduzcan */
+  gap: 0.6rem;
+  justify-content: flex-end;
+  flex-shrink: 0;
 }
-
 
 .logo {
   font-weight: 700;
@@ -60,27 +58,9 @@ nav {
 
 nav ul {
   list-style: none;
-  display: flex;
-  gap: 1.5rem;
   margin: 0;
   padding: 0;
   transition: max-height 0.3s ease;
-}
-
-/* Menú abierto para móvil - oculto por defecto */
-nav ul.closed {
-  max-height: 0;
-  overflow: hidden;
-  flex-direction: column;
-  gap: 0;
-}
-
-/* Mostrar menú cuando está abierto */
-nav ul.open {
-  max-height: 500px; /* suficiente para mostrar items */
-  overflow: visible;
-  flex-direction: column;
-  gap: 0.6rem;
 }
 
 nav ul li a {
@@ -96,9 +76,9 @@ nav ul li a:hover {
   background-color: #a1887f;
 }
 
-/* Botón menú hamburguesa - tres líneas */
+/* Botón menú hamburguesa */
 .menu-toggle {
-  display: flex; /* ahora siempre visible */
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   width: 25px;
@@ -107,45 +87,102 @@ nav ul li a:hover {
   background: none;
   border: none;
   padding: 0;
+  z-index: 1100;
 }
 
 .menu-toggle span {
   display: block;
-  height: 5px;         /* antes 3px, ahora más gruesas */
+  height: 5px;
   background-color: white;
   border-radius: 2px;
 }
 
-/* Responsive */
+/* Estilos para escritorio */
+@media (min-width: 769px) {
+  nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+}
+
+/* Responsive para móvil */
 @media (max-width: 768px) {
   nav ul {
+    display: none; /* oculto por defecto */
     flex-direction: column;
     background-color: #333;
     position: absolute;
-    top: 100%;
-    right: 0;
+    top: 60px;
+    right: 1rem;
     width: 200px;
     padding: 1rem;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
+  }
+
+  nav ul.open {
+    display: flex;
+    max-height: 500px;
+    overflow: visible;
+    gap: 0.6rem;
   }
 
   .menu-toggle {
     display: flex;
   }
 
-@media (max-width: 768px) {
-  nav ul.closed {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-  }
-
-  nav ul.open {
-    max-height: 500px; /* o el alto que necesites */
-    overflow: visible;
+  nav ul li a {
+    padding: 0.5rem 0;
+    color: white;
   }
 }
+
+/* Botón de idioma */
+#lang-toggle {
+  background-color: white;
+  color: #6d4c41;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background-color 0.3s;
+}
+
+#lang-toggle:hover {
+  background-color: #efebe9;
+}
+
+/* Ajustes para pantallas muy pequeñas */
+@media (max-width: 600px) {
+  header .header-content {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+    flex-grow: 1;
+  }
+
+  nav ul {
+    width: 100%;
+  }
+
+  nav ul li a {
+    padding: 0.6rem 1rem;
+    display: block;
+    width: 100%;
+  }
+
+  #lang-toggle {
+    order: 3;
+    margin-left: 0;
+  }
+}
+
 }
 
 /* Botón de idioma */
@@ -434,32 +471,6 @@ footer .contact-icons a:hover {
   .card-grid,
   .cert-list {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  nav ul.open {
-    position: absolute;
-    top: 60px; /* ajusta según la altura de tu header/nav */
-    right: 1rem;
-    width: 200px;
-    background-color: #333;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    z-index: 1000;
-  }
-
-  nav ul.open li a {
-    color: #fff; /* texto blanco */
-    text-decoration: none;
-    padding: 0.5rem 0;
-  }
-
-  nav ul.closed {
-    display: none;
   }
 }
 
