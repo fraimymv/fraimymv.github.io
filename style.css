@@ -440,7 +440,7 @@ footer .contact-icons a:hover {
 @media (max-width: 768px) {
   nav ul.open {
     position: absolute;
-    top: 100%;
+    top: 60px; /* ajusta según la altura de tu header/nav */
     right: 1rem;
     width: 200px;
     background-color: #333;
@@ -452,9 +452,11 @@ footer .contact-icons a:hover {
     z-index: 1000;
   }
 
- nav ul.open li a {
-  color: #fff; /* blanco para que se vea sobre fondo oscuro */
- }
+  nav ul.open li a {
+    color: #fff; /* texto blanco */
+    text-decoration: none;
+    padding: 0.5rem 0;
+  }
 
   nav ul.closed {
     display: none;
