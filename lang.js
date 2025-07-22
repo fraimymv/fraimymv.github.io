@@ -3,6 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const langToggleBtn = document.getElementById("lang-toggle");
   let currentLang = "es";
 
+  function actualizarFechaActualizacion(idioma = "es") {
+    const fecha = new Date("2025-07-22"); // Cambia esta fecha si quieres
+    const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+    const fechaFormateada = fecha.toLocaleDateString(idioma === "en" ? "en-US" : "es-ES", opciones);
+
+    const texto = idioma === "en"
+      ? `Last updated: ${fechaFormateada}`
+      : `Última actualización: ${fechaFormateada}`;
+
+    document.getElementById("ultima-actualizacion").textContent = texto;
+  }
+
   function updateLanguage(lang) {
     currentLang = lang;
     document.documentElement.lang = lang;
@@ -13,7 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     langToggleBtn.textContent = lang === "es" ? "EN" : "ES";
 
-    // Aquí podrías cambiar otros textos/hrefs según idioma
+    // Actualizar texto de fecha
+    actualizarFechaActualizacion(lang);
   }
 
   langToggleBtn.addEventListener("click", () => {
@@ -34,3 +47,5 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.setAttribute("aria-expanded", isOpen);
   });
 });
+
+
