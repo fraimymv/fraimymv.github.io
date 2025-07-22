@@ -452,6 +452,10 @@ footer .contact-icons a:hover {
     z-index: 1000;
   }
 
+ nav ul.open li a {
+  color: #fff; /* blanco para que se vea sobre fondo oscuro */
+ }
+
   nav ul.closed {
     display: none;
   }
