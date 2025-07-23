@@ -46,6 +46,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // Actualiza aria-expanded para accesibilidad
     menuToggle.setAttribute("aria-expanded", isOpen);
   });
+
+  // Cambiar color de títulos en experiencia al abrir/cerrar detalles
+  document.querySelectorAll('#experience details').forEach(detail => {
+    detail.addEventListener('toggle', () => {
+      const summarySpan = detail.querySelector('summary span');
+      if (detail.open) {
+        summarySpan.classList.add('open');
+      } else {
+        summarySpan.classList.remove('open');
+      }
+    });
+  });
+
+  // Inicializar títulos que ya están abiertos al cargar
+  document.querySelectorAll('#experience details[open]').forEach(detail => {
+    const summarySpan = detail.querySelector('summary span');
+    summarySpan.classList.add('open');
+  });
 });
 
 
