@@ -1,11 +1,11 @@
 /* General */
 body {
-  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-family: "Poppins", Helvetica, sans-serif;
   font-weight: 300;
-  font-size: 17px;
+  font-size: 14px;
   color: ##242b34;
   background-color: #15406a;
-  line-height: 1.6;
+  line-height: 1.2;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -199,7 +199,7 @@ nav ul li a:hover {
 
 .hero h1 {
   margin: 0 0 1rem;
-  font-family: "Playfair Display", serif;
+  font-family: 'Poppins', Helvetica, sans-serif;
   font-weight: 700;
   font-size: 3rem;
 }
