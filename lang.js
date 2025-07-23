@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentLang = "es";
 
   function actualizarFechaActualizacion(idioma = "es") {
-    const fecha = new Date("2025-07-22"); // Cambia esta fecha si quieres
+    const fecha = new Date("2025-07-23"); // Cambia esta fecha si quieres
     const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
     const fechaFormateada = fecha.toLocaleDateString(idioma === "en" ? "en-US" : "es-ES", opciones);
 
