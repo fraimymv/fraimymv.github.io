@@ -13,10 +13,10 @@ body {
 }
 
 .container {
-  width: 90%;
-  max-width: 1000px;
+  width: 95%;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
 }
 
 /* Estilos base */
@@ -240,6 +240,13 @@ li {
   color: #fff;
   line-height: 1.5;
 }
+
+.section p,
+.section ul,
+.section li {
+  margin-bottom: 1rem;
+}
+
 
 /* Skills container */
 .skills-container details {
