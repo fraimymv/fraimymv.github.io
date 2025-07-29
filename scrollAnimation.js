@@ -14,6 +14,6 @@ const options = {
 
 const observer = new IntersectionObserver(onEntry, options);
 
-document.querySelectorAll(".section, .hero").forEach((el) => {
+document.querySelectorAll(".section, .hero").forEach(el => {
   observer.observe(el);
 });
