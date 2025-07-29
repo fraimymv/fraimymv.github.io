@@ -283,19 +283,21 @@ li {
 .btn-cv,
 .btn-card {
   display: inline-block;
-  background-color: #ffffff29;
+  background-color: rgba(255, 255, 255, 0.15);
   color: #fff;
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   border-radius: 5px;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease;
+  box-shadow: none;
 }
 
 .btn-cv:hover,
 .btn-card:hover {
-  background-color: #ffffff99;
+  background-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
 }
 
 /* Cards grid */
@@ -438,5 +440,3 @@ footer .contact-icons a:hover {
     grid-template-columns: 1fr;
   }
 }
-
-
