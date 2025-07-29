@@ -1,3 +1,10 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* General */
 body {
   font-family: "Poppins", Helvetica, sans-serif;
@@ -19,12 +26,14 @@ body {
   padding: 1rem 2rem;
 }
 
-/* Estilos base */
 header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   background-color: #0f2b4699;
   color: white;
   padding: 1rem 0;
-  top: 0;
   z-index: 1000;
 }
 
@@ -34,6 +43,7 @@ header {
   align-items: center;
   padding: 0 1rem;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .header-buttons {
@@ -118,6 +128,7 @@ nav ul li a:hover {
   background-color: #efebe9;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -160,6 +171,43 @@ nav ul li a:hover {
   #lang-toggle {
     order: 1;
     margin-left: 0;
+  }
+}
+
+/* Mejoras para pantallas más pequeñas (móviles) */
+@media (max-width: 480px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .card-grid,
+  .cert-list {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    right: 0.5rem;
+    width: 90%;
+  }
+
+  .btn-cv,
+  .btn-card {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
   }
 }
 
@@ -392,7 +440,9 @@ footer .contact-icons a:hover {
   transform: scale(1.1);
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
+
 
