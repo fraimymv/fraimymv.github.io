@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Toggle idioma
   const langToggleBtn = document.getElementById("lang-toggle");
-  let currentLang = "es";
+  let currentLang = localStorage.getItem("lang") || "es";
 
   function actualizarFechaActualizacion(idioma = "es") {
-    const fecha = new Date("2025-07-24"); // Cambia esta fecha si quieres
+    const fecha = new Date(document.lastModified); // Fecha real de modificación
     const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
-    const fechaFormateada = fecha.toLocaleDateString(idioma === "en" ? "en-US" : "es-ES", opciones);
+    const fechaFormateada = fecha.toLocaleDateString(
+      idioma === "en" ? "en-US" : "es-ES",
+      opciones
+    );
 
     const texto = idioma === "en"
       ? `Last updated: ${fechaFormateada}`
@@ -17,15 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function updateLanguage(lang) {
     currentLang = lang;
+    localStorage.setItem("lang", lang);
     document.documentElement.lang = lang;
 
     document.querySelectorAll("[data-lang-es]").forEach(el => {
-      el.textContent = lang === "es" ? el.getAttribute("data-lang-es") : el.getAttribute("data-lang-en");
+      el.textContent = lang === "es"
+        ? el.getAttribute("data-lang-es")
+        : el.getAttribute("data-lang-en");
     });
 
     langToggleBtn.textContent = lang === "es" ? "EN" : "ES";
-
-    // Actualizar texto de fecha
     actualizarFechaActualizacion(lang);
   }
 
@@ -35,35 +38,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
   updateLanguage(currentLang);
 
-  // Toggle menú hamburguesa
   const menuToggle = document.querySelector(".menu-toggle");
   const navMenu = document.getElementById("nav-menu");
 
   menuToggle.addEventListener("click", () => {
     const isOpen = navMenu.classList.toggle("open");
     navMenu.classList.toggle("closed", !isOpen);
-
-    // Actualiza aria-expanded para accesibilidad
     menuToggle.setAttribute("aria-expanded", isOpen);
   });
 
-  // Cambiar color de títulos en experiencia al abrir/cerrar detalles
-  document.querySelectorAll('#experience details').forEach(detail => {
-    detail.addEventListener('toggle', () => {
-      const summarySpan = detail.querySelector('summary span');
+  document.querySelectorAll("#nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+      navMenu.classList.add("closed");
+      menuToggle.setAttribute("aria-expanded", false);
+    });
+  });
+
+  document.querySelectorAll("#experience details").forEach(detail => {
+    detail.addEventListener("toggle", () => {
+      const summarySpan = detail.querySelector("summary span");
       if (detail.open) {
-        summarySpan.classList.add('open');
+        summarySpan.classList.add("open");
       } else {
-        summarySpan.classList.remove('open');
+        summarySpan.classList.remove("open");
       }
     });
   });
 
-  // Inicializar títulos que ya están abiertos al cargar
-  document.querySelectorAll('#experience details[open]').forEach(detail => {
-    const summarySpan = detail.querySelector('summary span');
-    summarySpan.classList.add('open');
+  document.querySelectorAll("#experience details[open]").forEach(detail => {
+    const summarySpan = detail.querySelector("summary span");
+    summarySpan.classList.add("open");
   });
 });
+
 
 
