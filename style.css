@@ -111,13 +111,15 @@ nav ul li a {
   border: none;
   padding: 0;
   z-index: 1100;
+  -webkit-appearance: none; /* para iOS */
 }
 
 .menu-toggle span {
   display: block;
-  height: 5px;
-  background-color: white;
+  height: 5px;             /* puedes bajar a 4px si quieres */
+  background-color: white; /* ¡así se ve en iPhone! */
   border-radius: 2px;
+  transition: background-color 0.3s ease;
 }
 
 #lang-toggle {
