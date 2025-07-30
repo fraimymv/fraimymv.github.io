@@ -32,9 +32,15 @@ document.addEventListener("DOMContentLoaded", () => {
     actualizarFechaActualizacion(lang);
   }
 
-  langToggleBtn.addEventListener("click", () => {
-    updateLanguage(currentLang === "es" ? "en" : "es");
-  });
+langToggleBtn.addEventListener("click", () => {
+  updateLanguage(currentLang === "es" ? "en" : "es");
+
+  if (navMenu.classList.contains("open")) {
+    navMenu.classList.remove("open");
+    navMenu.classList.add("closed");
+    menuToggle.setAttribute("aria-expanded", false);
+  }
+});
 
   updateLanguage(currentLang);
 
