@@ -192,22 +192,23 @@ nav ul li a {
   }
 
   .header-content {
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;        
+    justify-content: space-between; 
+    align-items: center;      
     gap: 0.5rem;
   }
 
   .logo {
     font-size: 1.4rem;
-    text-align: center;
+    text-align: left;         
+    flex-shrink: 0;            
   }
 
   .header-buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end; 
     align-items: center;
-    width: 100%;
-  }
+    width: auto;  }
 
   .menu-toggle {
     display: flex;
@@ -245,6 +246,19 @@ nav ul li a {
   .btn-card {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cert-list {
+    grid-template-columns: 1fr !important;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .cert-list li a {
+    width: 100%;
+    max-width: 100%;
   }
 }
 
@@ -329,6 +343,18 @@ li {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Certificados */
