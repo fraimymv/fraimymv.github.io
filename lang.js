@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   const langToggleBtn = document.getElementById("lang-toggle");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.getElementById("nav-menu");
   let currentLang = localStorage.getItem("lang") || "es";
 
   function actualizarFechaActualizacion(idioma = "es") {
-    const fecha = new Date(document.lastModified); // Fecha real de modificación
+    const fecha = new Date(document.lastModified);
     const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
     const fechaFormateada = fecha.toLocaleDateString(
       idioma === "en" ? "en-US" : "es-ES",
@@ -11,8 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     const texto = idioma === "en"
-      ? Last updated: ${fechaFormateada}
-      : Última actualización: ${fechaFormateada};
+      ? `Last updated: ${fechaFormateada}`
+      : `Última actualización: ${fechaFormateada}`;
 
     document.getElementById("ultima-actualizacion").textContent = texto;
   }
@@ -28,37 +30,34 @@ document.addEventListener("DOMContentLoaded", () => {
         : el.getAttribute("data-lang-en");
     });
 
-  const btnCV = document.getElementById("btn-cv");
-if (btnCV) {
-  if (lang === "es") {
-    btnCV.href = "docs/FraimyMendezVasquez_CV.pdf";
-    btnCV.setAttribute("download", "FraimyMendezVasquez_CV.pdf");
-    btnCV.removeAttribute("target");
-  } else {
-    btnCV.href = "docs/FraimyMendezVasquez_Resume.pdf";
-    btnCV.setAttribute("download", "FraimyMendezVasquez_Resume.pdf");
-    btnCV.removeAttribute("target");
-  }
-}
+    const btnCV = document.getElementById("btn-cv");
+    if (btnCV) {
+      if (lang === "es") {
+        btnCV.href = "docs/FraimyMendezVasquez_CV.pdf";
+        btnCV.setAttribute("download", "FraimyMendezVasquez_CV.pdf");
+        btnCV.removeAttribute("target");
+      } else {
+        btnCV.href = "docs/FraimyMendezVasquez_Resume.pdf";
+        btnCV.setAttribute("download", "FraimyMendezVasquez_Resume.pdf");
+        btnCV.removeAttribute("target");
+      }
+    }
 
     langToggleBtn.textContent = lang === "es" ? "EN" : "ES";
     actualizarFechaActualizacion(lang);
   }
 
-langToggleBtn.addEventListener("click", () => {
-  updateLanguage(currentLang === "es" ? "en" : "es");
+  langToggleBtn.addEventListener("click", () => {
+    updateLanguage(currentLang === "es" ? "en" : "es");
 
-  if (navMenu.classList.contains("open")) {
-    navMenu.classList.remove("open");
-    navMenu.classList.add("closed");
-    menuToggle.setAttribute("aria-expanded", false);
-  }
-});
+    if (navMenu.classList.contains("open")) {
+      navMenu.classList.remove("open");
+      navMenu.classList.add("closed");
+      menuToggle.setAttribute("aria-expanded", false);
+    }
+  });
 
   updateLanguage(currentLang);
-
-  const menuToggle = document.querySelector(".menu-toggle");
-  const navMenu = document.getElementById("nav-menu");
 
   menuToggle.addEventListener("click", () => {
     const isOpen = navMenu.classList.toggle("open");
