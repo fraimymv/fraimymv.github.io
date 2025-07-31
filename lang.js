@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     const texto = idioma === "en"
-      ? `Last updated: ${fechaFormateada}`
-      : `Última actualización: ${fechaFormateada}`;
+      ? Last updated: ${fechaFormateada}
+      : Última actualización: ${fechaFormateada};
 
     document.getElementById("ultima-actualizacion").textContent = texto;
   }
@@ -27,6 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
         ? el.getAttribute("data-lang-es")
         : el.getAttribute("data-lang-en");
     });
+
+  const btnCV = document.getElementById("btn-cv");
+if (btnCV) {
+  if (lang === "es") {
+    btnCV.href = "docs/FraimyMendezVasquez_CV.pdf";
+    btnCV.setAttribute("download", "FraimyMendezVasquez_CV.pdf");
+    btnCV.removeAttribute("target");
+  } else {
+    btnCV.href = "docs/FraimyMendezVasquez_Resume.pdf";
+    btnCV.setAttribute("download", "FraimyMendezVasquez_Resume.pdf");
+    btnCV.removeAttribute("target");
+  }
+}
 
     langToggleBtn.textContent = lang === "es" ? "EN" : "ES";
     actualizarFechaActualizacion(lang);
@@ -77,6 +90,5 @@ langToggleBtn.addEventListener("click", () => {
     summarySpan.classList.add("open");
   });
 });
-
 
 
