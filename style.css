@@ -31,7 +31,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #0f2b4699;
+  background-color: #00000040;
   color: white;
   padding: 1rem 0;
   z-index: 1000;
@@ -444,7 +444,7 @@ details ul {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  background-color: #1e3f60;
+  background-color: #ffffff0d;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 10px;
   padding: 2rem 1.2rem 1.2rem;
