@@ -8,8 +8,8 @@ body {
   font-family: "Poppins", Helvetica, sans-serif;
   font-weight: 300;
   font-size: 14px;
-  color: #242b34;
-  background: linear-gradient(to bottom, #15406a, #0f2b46);
+  color: #3b2f4a;
+  background: linear-gradient(to bottom, #f5f1ec, #e7e0d6);
   line-height: 1.2;
   min-height: 100vh;
   display: flex;
@@ -31,10 +31,11 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #00000040;
-  color: white;
+  background-color: #4a3a66dd;
+  color: #f5f1ec;
   padding: 1rem 0;
   z-index: 1000;
+  box-shadow: 0 2px 8px rgba(74, 58, 102, 0.7);
 }
 
 .header-content {
@@ -59,13 +60,15 @@ header {
 .logo {
   font-weight: 700;
   font-size: 1.6rem;
-  color: white;
+  color: #f5f1ec;
   text-decoration: none;
   flex-shrink: 0;
+  font-family: 'Segoe Script', cursive; 
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .logo:hover {
-  color: #058191;
+  color: #d6876a;
   transform: scale(1.05);
 }
 
@@ -86,19 +89,19 @@ nav ul {
 }
 
 nav ul li a {
-  color: white;
+  color: #f5f1ec;
   text-decoration: none;
   font-weight: 600;
   padding: 0.4rem 0.6rem;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s ease;
 }
 
-  nav ul li a:hover {
-  background-color: #ffffff08;
-  color: #058191;
+nav ul li a:hover {
+  background-color: #d6876a99;
+  color: #4a3a66;
   transform: sacale(1.05);
-  }
+ }
 
 .menu-toggle {
   display: none;
@@ -111,20 +114,20 @@ nav ul li a {
   border: none;
   padding: 0;
   z-index: 1100;
-  -webkit-appearance: none; /* para iOS */
+  -webkit-appearance: none;
 }
 
 .menu-toggle span {
   display: block;
-  height: 5px;             /* puedes bajar a 4px si quieres */
-  background-color: white; /* ¡así se ve en iPhone! */
+  height: 5px;            
+  background-color: #f5f1ec; 
   border-radius: 2px;
   transition: background-color 0.3s ease;
 }
 
 #lang-toggle {
-  background-color: white;
-  color: #0f2b46;
+  background-color: #7a698c;
+  color: #f5f1ec;
   border: none;
   padding: 0.3rem 0.6rem;
   font-weight: 600;
@@ -139,22 +142,22 @@ nav ul li a {
 }
 
 #lang-toggle:hover {
-  background-color: #058191;
+  background-color: #d6876a;
+  color: #3b2f4a
   transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
-    background-color: #0f2b46;
+    background-color: #7a698ccc;
     position: absolute;
     top: 60px;
     right: 1rem;
     width: 200px;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px #000;
-    z-index: 1000;
+    box-shadow:0 4px 12px rgba(74, 58, 102, 0.5);
     max-height: 0;
     overflow: hidden;
     display: none;
@@ -174,7 +177,7 @@ nav ul li a {
 
   nav ul li a {
     padding: 0.5rem 0;
-    color: #fff;
+    color: #f5f1ec;
   }
 
   .menu-toggle {
@@ -273,13 +276,17 @@ nav ul li a {
 }
 
 .hero {
-  background-color: #0f2b46;
+  background-color: #7a698c;
   padding: 4rem 1rem;
   text-align: center;
-  color: #fff;
+  color: #f5f1ec;
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.6s ease-out;
+}
+
+.hero .container p{
+  color: #f1f5ecb8;
 }
 
 .hero.visible {
@@ -322,7 +329,7 @@ main.container {
 h2 {
   margin-bottom: 1rem;
   font-weight: 600;
-  color: #fff;
+  color: #3b2f4a;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -330,7 +337,7 @@ h2 {
 p,
 li {
   font-size: 1rem;
-  color: #fff;
+  color: #5a466d;
   line-height: 1.5;
 }
 
@@ -340,7 +347,6 @@ li {
   margin-bottom: 1rem;
 }
 
-/* Proyectos */
 .card-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -359,7 +365,6 @@ li {
   }
 }
 
-/* Certificados */
 .cert-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -372,11 +377,11 @@ li {
 #experience details,
 .skills-container details,
 .cert-list li a {
-  background-color: #ffffff0d;
+  background-color: rgba(231, 224, 214, 0.2);
   border-radius: 8px;
-  padding: 1rem;
-  color: #fff;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 1em;
+  color: #4a3a66;
+  box-shadow: 0 2px 8px rgba(74, 58, 102, 0.25);
   transition: all 0.3s ease-in-out;
   margin-bottom: 1rem;
 }
@@ -385,8 +390,8 @@ li {
 #experience details:hover,
 .skills-container details:hover,
 .cert-list li a:hover {
-  background-color: #443938b8;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background-color: #d6876a;
+  box-shadow: 0 6px 16px rgba(214, 134, 106, 0.5);
   transform: translateY(-3px);
 }
 
@@ -395,7 +400,7 @@ li {
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
-  color: #fff;
+  color: #3b2f4a;
   outline: none;
 }
 
@@ -409,22 +414,22 @@ details ul {
 .btn-cv,
 .btn-card {
   display: inline-block;
-  background-color: #058191;
-  color: #fff;
+  background-color: #d6876a;
+  color: #f5f1ec;
   padding: 0.6rem 1.2rem;
   margin-top: 1rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease-in-out;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 5px rgba(74, 58, 102, 0.3);
 }
 
 .btn-cv:hover,
 .btn-card:hover {
-  background-color: #034d54;
+  background-color: #4a3a66;
   transform: translateY(-2px);
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 12px rgba(74, 58, 102, 0.4);
 }
 
 .fade-slide {
@@ -444,14 +449,14 @@ details ul {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  background-color: #ffffff0d;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: rgba(231, 224, 214, 0.2);
+  border: 1px solid rgba(122, 105, 140, 0.4);
   border-radius: 10px;
   padding: 2rem 1.2rem 1.2rem;
-  color: #fff;
+  color: #4a3a66;
   text-decoration: none;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 8px rgba(74, 58, 102, 0.25);
   transition: all 0.3s ease-in-out;
   min-height: 120px;
   text-align: center;
@@ -484,9 +489,10 @@ details ul {
 }
 
 .cert-list li a:hover {
-  background-color: #443938b8;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  background-color: #d6876a;
+  box-shadow: 0 6px 16px rgba(214, 134, 106, 0.5);
   transform: translateY(-3px);
+  color: #2b1f38;
 }
 
 .cert-list li a:hover::after {
@@ -495,8 +501,8 @@ details ul {
 }
 
 footer {
-  background-color: #00000040;
-  color: white;
+  background-color: #4a3a66cc;
+  color: #f5f1ec;
   text-align: center;
   padding: 1.5rem 1rem;
   font-weight: 300;
@@ -506,7 +512,7 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid #d6876aaa;
 }
 
 footer .contact-icons {
@@ -516,11 +522,23 @@ footer .contact-icons {
 }
 
 footer .contact-icons a {
-  color: white;
+  color: #f5f1ec;
   transition: all 0.3s ease-in-out;
 }
 
 footer .contact-icons a:hover {
-  color: #034d54;
+  color: #d6876a;
   transform: scale(1.1);
 }
+
+.footer-content p{
+  color: #f5f1ec
+}
+
+.fa-solid, .fas {
+  font-family: "Font Awesome 6 Free" !important;
+  font-weight: 900 !important;
+  font-style: normal;
+}
+
+
