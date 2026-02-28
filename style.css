@@ -486,7 +486,7 @@ details ul {
               background-color 0.25s ease;
 }
 
-.cert-section:not([open]):hover {
+.cert-section:hover {
   background-color: #d6876a;
   box-shadow: 0 6px 16px rgba(214, 134, 106, 0.5);
   transform: translateY(-3px);
