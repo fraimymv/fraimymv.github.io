@@ -541,7 +541,7 @@ details ul {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  background-color: rgba(231, 224, 214, 0.2);
+  background-color: #e8e2d8ad;
   border: 1px solid rgba(122, 105, 140, 0.4);
   border-radius: 10px;
   padding: 2rem 1.2rem 1.2rem;
