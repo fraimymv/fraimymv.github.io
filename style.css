@@ -382,8 +382,7 @@ li {
 
 .card,
 #experience details,
-.skills-container details,
-.cert-list li a {
+.skills-container details{
   background-color: rgba(231, 224, 214, 0.2);
   border-radius: 8px;
   padding: 1em;
@@ -395,8 +394,7 @@ li {
 
 .card:hover,
 #experience details:hover,
-.skills-container details:hover,
-.cert-list li a:hover {
+.skills-container details:hover{
   background-color: #d6876a;
   box-shadow: 0 6px 16px rgba(214, 134, 106, 0.5);
   transform: translateY(-3px);
@@ -406,9 +404,36 @@ li {
 #experience summary {
   font-weight: 600;
   font-size: 1.1rem;
-  cursor: pointer;
   color: #3b2f4a;
+  cursor: pointer;
   outline: none;
+  list-style: none;
+  padding: 0.4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.skills-container summary::marker,
+#experience summary::marker {
+  display: none;
+}
+
+.skills-container summary::-webkit-details-marker,
+#experience summary::-webkit-details-marker {
+  display: none;
+}
+
+.skills-container summary::after,
+#experience summary::after {
+  content: "▾";
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.skills-container details[open] summary::after,
+#experience details[open] summary::after {
+  transform: rotate(180deg);
 }
 
 .skills-container ul,
@@ -450,6 +475,66 @@ details ul {
   transform: translateY(0);
 }
 
+.cert-section {
+  margin-bottom: 2.5rem;
+  border-radius: 14px;
+  background-color: rgba(231, 224, 214, 0.25);
+  box-shadow: 0 4px 12px rgba(74, 58, 102, 0.15);
+  padding: 1.2rem 1.4rem;
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease,
+              background-color 0.25s ease;
+}
+
+.cert-section:not([open]):hover {
+  background-color: #d6876a;
+  box-shadow: 0 6px 16px rgba(214, 134, 106, 0.5);
+  transform: translateY(-3px);
+}
+
+.cert-section[open] {
+  background-color: #c9785c;
+}
+
+.cert-section summary {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #3b2f4a;
+  cursor: pointer;
+  outline: none;
+  list-style: none;
+  padding: 0.4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cert-section summary::marker {
+  display: none;
+}
+
+.cert-section summary::after {
+  content: "▾";
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.cert-section[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.cert-list {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.cert-list li {
+  list-style-type: none;
+}
+
 .cert-list li a {
   display: flex;
   flex-direction: column;
@@ -472,6 +557,7 @@ details ul {
   box-sizing: border-box;
   word-wrap: break-word;
   word-break: break-word;
+  line-height: 1.35;
 }
 
 .cert-list li a > * {
@@ -489,10 +575,6 @@ details ul {
   color: #fff;
   opacity: 0.8;
   transition: transform 0.3s ease-in-out;
-}
-
-.cert-list li {
-  list-style-type: none;
 }
 
 .cert-list li a:hover {
