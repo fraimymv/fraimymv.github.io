@@ -380,7 +380,41 @@ li {
   padding: 0;
 }
 
-.card,
+.card{
+  background-color: rgba(231, 224, 214, 0.2);
+  border-radius: 8px;
+  padding: 1em;
+  color: #4a3a66;
+  box-shadow: 0 2px 8px rgba(74, 58, 102, 0.25);
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 1rem;
+}
+
+.card:hover{
+  background-color: #d6876a;
+  box-shadow: 0 6px 16px rgba(214, 134, 106, 0.5);
+  transform: translateY(-3px);
+}
+
+.btn-card {
+  display: inline-block;
+  background-color: #d6876a;
+  color: #f5f1ec;
+  padding: 0.6rem 1.2rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 2px 5px rgba(74, 58, 102, 0.3);
+}
+
+.card:hover .btn-card {
+  background-color: #4a3a66;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 12px rgba(74, 58, 102, 0.4);
+}
+
 #experience details,
 .skills-container details{
   background-color: rgba(231, 224, 214, 0.2);
@@ -392,12 +426,17 @@ li {
   margin-bottom: 1rem;
 }
 
-.card:hover,
 #experience details:hover,
 .skills-container details:hover{
   background-color: #d6876a;
   box-shadow: 0 6px 16px rgba(214, 134, 106, 0.5);
   transform: translateY(-3px);
+}
+
+#experience details[open],
+.skills-container details[open] {
+  background-color: #cbc3c4b0;
+  box-shadow: 0 8px 20px rgba(214, 134, 106, 0.35)
 }
 
 .skills-container summary,
@@ -443,8 +482,7 @@ details ul {
   margin-bottom: 1rem;
 }
 
-.btn-cv,
-.btn-card {
+.btn-cv {
   display: inline-block;
   background-color: #d6876a;
   color: #f5f1ec;
@@ -457,8 +495,7 @@ details ul {
   box-shadow: 0 2px 5px rgba(74, 58, 102, 0.3);
 }
 
-.btn-cv:hover,
-.btn-card:hover {
+.btn-cv:hover {
   background-color: #4a3a66;
   transform: translateY(-2px);
   box-shadow: 0 5px 12px rgba(74, 58, 102, 0.4);
@@ -494,6 +531,7 @@ details ul {
 
 .cert-section[open] {
   background-color: #5f51763b;
+  box-shadow: 0 8px 20px rgba(214, 134, 106, 0.35)
 }
 
 .cert-section summary {
